@@ -28,7 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Neusoft-news" options="-parameters" />
+      <module name="Neusoft-news" options="" />
       <module name="neusoft-file-starter" options="-parameters" />
       <module name="neusoft-news-admin" options="-parameters" />
       <module name="neusoft-news-admin-gateway" options="-parameters" />
@@ -38,11 +38,11 @@
       <module name="neusoft-news-behavior" options="-parameters" />
       <module name="neusoft-news-common" options="-parameters" />
       <module name="neusoft-news-feign-api" options="-parameters" />
-      <module name="neusoft-news-gateway" options="-parameters" />
+      <module name="neusoft-news-gateway" options="" />
       <module name="neusoft-news-model" options="-parameters" />
       <module name="neusoft-news-schedule" options="-parameters" />
       <module name="neusoft-news-search" options="-parameters" />
-      <module name="neusoft-news-service" options="-parameters" />
+      <module name="neusoft-news-service" options="" />
       <module name="neusoft-news-user" options="-parameters" />
       <module name="neusoft-news-utils" options="-parameters" />
       <module name="neusoft-news-wemedia" options="-parameters" />
