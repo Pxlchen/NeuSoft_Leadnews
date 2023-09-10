@@ -23,7 +23,7 @@ git remote add github https://github.com/Pxlchen/NeuSoft_Leadnews.git
 - 拉取单一仓库
 
 ```bash
-git pull gitee
+git pull gitee #分支
 ```
 
 
