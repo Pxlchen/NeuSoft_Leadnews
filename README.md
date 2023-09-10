@@ -28,10 +28,22 @@ git clone https://gitee.com/hchenp/neu-soft_-leadnews.git
 
 
 
-- 查看仓库名称
+- 查看远程仓库
 
 ```bash
 git remote -v
+```
+
+
+
+- 自定义远程仓库名称
+
+```bash
+#查看
+git remote show
+
+#重命名
+git remote rename #remoteOldName #remoteNewName
 ```
 
 
@@ -49,6 +61,6 @@ git commit -m '提交信息'
 - 推送
 
 ```bash
-git push #名称 #分支
+git push #远程仓库名称 #分支
 ```
 
