@@ -25,6 +25,7 @@ public class ApUserSearchController {
         return apUserSearchService.findUserSearch();
     }
 
+    @PostMapping("/del")
     @ApiOperation("删除搜索记录")
     public ResponseResult delUserSearch(@RequestBody HistorySearchDto dto){
         return apUserSearchService.delUserSearch(dto);

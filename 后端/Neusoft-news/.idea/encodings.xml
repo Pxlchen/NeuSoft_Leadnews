@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/neusoft-news-basic/neusoft-file-starter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-basic/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-basic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-feign-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-gateway/neusoft-news-admin-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-gateway/neusoft-news-app-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-gateway/neusoft-news-wemedia-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-article/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-behavior/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-schedule/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/neusoft-news-wemedia/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/neusoft-news-service/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/neusoft-news-utils/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
