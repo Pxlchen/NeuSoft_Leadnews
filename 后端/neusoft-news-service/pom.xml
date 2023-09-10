@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Neusoft-news</artifactId>
+        <groupId>com.neusoft</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+    <modules>
+        <module>neusoft-news-user</module>
+        <module>neusoft-news-article</module>
+        <module>neusoft-news-wemedia</module>
+        <module>neusoft-news-schedule</module>
+        <module>neusoft-news-search</module>
+        <module>neusoft-news-admin</module>
+        <module>neusoft-news-behavior</module>
+    </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>neusoft-news-service</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- 引入依赖模块 -->
+        <dependency>
+            <groupId>com.neusoft</groupId>
+            <artifactId>neusoft-news-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.neusoft</groupId>
+            <artifactId>neusoft-news-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.neusoft</groupId>
+            <artifactId>neusoft-news-feign-api</artifactId>
+        </dependency>
+        <!-- Spring boot starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
