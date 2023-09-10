@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="neusoft-file-starter" />
+        <module name="neusoft-news-admin-gateway" />
+        <module name="neusoft-news-wemedia" />
+        <module name="neusoft-news-utils" />
+        <module name="neusoft-news-user" />
+        <module name="neusoft-news-behavior" />
+        <module name="neusoft-news-schedule" />
+        <module name="neusoft-news-wemedia-gateway" />
+        <module name="neusoft-news-admin" />
+        <module name="neusoft-news-article" />
+        <module name="neusoft-news-app-gateway" />
+        <module name="neusoft-news-model" />
+        <module name="neusoft-news-search" />
+        <module name="neusoft-news-common" />
+        <module name="neusoft-news-feign-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Neusoft-news" options="-parameters" />
+      <module name="neusoft-file-starter" options="-parameters" />
+      <module name="neusoft-news-admin" options="-parameters" />
+      <module name="neusoft-news-admin-gateway" options="-parameters" />
+      <module name="neusoft-news-app-gateway" options="-parameters" />
+      <module name="neusoft-news-article" options="-parameters" />
+      <module name="neusoft-news-basic" options="-parameters" />
+      <module name="neusoft-news-behavior" options="-parameters" />
+      <module name="neusoft-news-common" options="-parameters" />
+      <module name="neusoft-news-feign-api" options="-parameters" />
+      <module name="neusoft-news-gateway" options="-parameters" />
+      <module name="neusoft-news-model" options="-parameters" />
+      <module name="neusoft-news-schedule" options="-parameters" />
+      <module name="neusoft-news-search" options="-parameters" />
+      <module name="neusoft-news-service" options="-parameters" />
+      <module name="neusoft-news-user" options="-parameters" />
+      <module name="neusoft-news-utils" options="-parameters" />
+      <module name="neusoft-news-wemedia" options="-parameters" />
+      <module name="neusoft-news-wemedia-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>
