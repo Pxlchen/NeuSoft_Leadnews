@@ -11,9 +11,20 @@
 
 ```bash
 #gitee
-git remote add #remoteName https://gitee.com/hchenp/neu-soft_-leadnews.git
+git remote add gitee https://gitee.com/hchenp/neu-soft_-leadnews.git
 
 #github
-git remote add #remoteName https://github.com/Pxlchen/NeuSoft_Leadnews.git
+git remote add github https://github.com/Pxlchen/NeuSoft_Leadnews.git
+```
+
+
+
+```bash
+git clone https://gitee.com/hchenp/neu-soft_-leadnews.git
+```
+
+
+
+```bash
 ```
 
