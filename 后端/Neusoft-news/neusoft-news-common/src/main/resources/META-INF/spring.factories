@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.neusoft.common.exception.ExceptionCatch,\
+  com.neusoft.common.swagger.SwaggerConfiguration,\
+  com.neusoft.common.swagger.Swagger2Configuration,\
+  com.neusoft.common.baiduyun.AipContentCensorClientConfig,\
+  com.neusoft.common.tess4j.Tess4jClient,\
+  com.neusoft.common.redis.CacheService,\
+  com.neusoft.common.jackson.InitJacksonConfig
