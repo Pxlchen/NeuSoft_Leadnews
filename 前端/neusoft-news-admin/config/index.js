@@ -12,11 +12,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/server_85/ADMIN': {
-        target: 'http://localhost:9007/', //源地址
+      '/server_85/admin': {
+        target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/server_85/ADMIN': ''
+          '^/server_85': ''
         }
       },
       '/server_85/WEBSOCKET': {

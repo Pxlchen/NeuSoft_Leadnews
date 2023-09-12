@@ -58,25 +58,24 @@ export default {
   },
   methods: {
   async submitForm () {
-    this.$router.replace({path:'/index'}) //跳转
-       // let {password , name} = this.ruleForm;
-       // if(!name || !password){
-       //     this.$message({
-       //        message:'用户名和密码不能为空',
-       //        type:'warning'
-       //      })
-       //      return
-       // }
-       // //登录
-       // let result = await loginByUsername(name,password) //登录
-       //  if(result.code0=0){
-       //    this.$router.replace({path:'/index'}) //跳转
-       //  }else{
-       //    this.$message({
-       //      message:result.error_message,
-       //      type:'error'
-       //    })
-       //  }
+       let {password , name} = this.ruleForm;
+       if(!name || !password){
+           this.$message({
+              message:'用户名和密码不能为空',
+              type:'warning'
+            })
+            return
+       }
+       //登录
+       let result = await loginByUsername(name,password) //登录
+        if(result.code==200){
+          this.$router.replace({path:'/index'}) //跳转
+        }else{
+          this.$message({
+            message:result.error_message,
+            type:'error'
+          })
+        }
     }
   }
 }
