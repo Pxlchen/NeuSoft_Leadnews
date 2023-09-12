@@ -67,6 +67,7 @@
                     Api.login(this.params).then(d=>{
                         if(d.code==200){
                             this.$store.setToken(d.data.token)
+							// alert(d.data.token)
                             this.$router.push("/home")
                         }else{
                             modal.toast({ message:'用户或密码错误',duration:3})

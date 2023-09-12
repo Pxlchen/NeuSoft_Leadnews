@@ -1,11 +1,8 @@
 <template>
     <div class="art-page">
         <div class="art-top"><TopBar :text="title"/></div>
-        
 		<div class="iframediv">
-			<!-- <iframe  :src=></iframe> -->
 			<iframe class="iframe"  :src="iframesrc"  width="100%" frameborder="0" scrolling="auto"  :style="{height:'100vh'}"></iframe>
-
 		</div>
     </div>
 </template>
@@ -22,10 +19,10 @@
     export default {
         name: "index",
         components:{TopBar,BottomBar,WxcButton,Button},
-        props:['id','title','date','comment','type','source','authorId'],
+        props:['id','title','date','comment','type','source','authorId',"staticUrl"],
         data(){
             return {
-				iframesrc:"http://192.168.200.130:9000/leadnews/2023/09/06/1699347696923578370.html",
+				iframesrc: '',
                 scrollerHeight:'500px',
                 icon : {
                     like : '\uf164',
@@ -57,6 +54,7 @@
             }
         },
         created(){
+			// alert(this.token);
             Api.setVue(this);
             this.loadInfo();
             this.loadBehavior();
@@ -66,13 +64,17 @@
                 if(_this.time.loadOff){
                     _this.time.loadDuration+=_this.time.timerStep
                 }
-            },this.time.timerStep)
+            },this.time.timerStep);
         },
         destroyed(){
             this.read();
         },
         mounted(){
             this.scrollerHeight=(Utils.env.getPageHeight()-180)+'px';
+			this.$store.getToken().then(token=>{
+			    this.iframesrc = this.staticUrl+"?articleId="+this.id+"&authorId="+this.authorId+"&token=" + token;
+				// alert(this.iframesrc);
+			})
         },
         methods : {
             imageLoad : function(item,e){

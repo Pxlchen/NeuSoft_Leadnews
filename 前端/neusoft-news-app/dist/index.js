@@ -30135,11 +30135,12 @@ exports.default = {
           id: data[i].id,
           title: data[i].title,
           comment: data[i].comment,
-          authorId: data[i].author_id,
-          source: data[i].author_name,
+          authorId: data[i].authorId,
+          source: data[i].authorName,
           date: data[i].publish_time,
           type: ims.length == 2 ? 1 : ims.length,
           image: ims,
+          staticUrl: data[i].staticUrl,
           icon: "\uF06D"
         };
         var time = data[i].publish_time;
@@ -30184,6 +30185,7 @@ exports.default = {
 
     // 列表项点击事件
     wxcPanItemClicked: function wxcPanItemClicked(item) {
+      // alert(item);
       this.$router.push({
         name: 'article-info',
         params: item
@@ -31952,17 +31954,14 @@ var modal = weex.requireModule("modal"); //
 //
 //
 //
-//
-//
-//
 
 exports.default = {
     name: "index",
     components: { TopBar: _article_top_bar2.default, BottomBar: _article_bottom_bar2.default, WxcButton: _weexUi.WxcButton, Button: _button2.default },
-    props: ['id', 'title', 'date', 'comment', 'type', 'source', 'authorId'],
+    props: ['id', 'title', 'date', 'comment', 'type', 'source', 'authorId', "staticUrl"],
     data: function data() {
         return {
-            iframesrc: "http://192.168.200.130:9000/leadnews/2023/09/06/1699347696923578370.html",
+            iframesrc: '',
             scrollerHeight: '500px',
             icon: {
                 like: '\uF164',
@@ -31994,6 +31993,7 @@ exports.default = {
         };
     },
     created: function created() {
+        // alert(this.token);
         _api2.default.setVue(this);
         this.loadInfo();
         this.loadBehavior();
@@ -32009,7 +32009,13 @@ exports.default = {
         this.read();
     },
     mounted: function mounted() {
+        var _this2 = this;
+
         this.scrollerHeight = _weexUi.Utils.env.getPageHeight() - 180 + 'px';
+        this.$store.getToken().then(function (token) {
+            _this2.iframesrc = _this2.staticUrl + "?articleId=" + _this2.id + "&authorId=" + _this2.authorId + "&token=" + token;
+            // alert(this.iframesrc);
+        });
     },
 
     methods: {
@@ -32026,16 +32032,16 @@ exports.default = {
             }
         },
         loadInfo: function loadInfo() {
-            var _this2 = this;
+            var _this3 = this;
 
             _api2.default.loadinfo(this.id).then(function (d) {
                 if (d.code == 0) {
-                    _this2.config = d.data['config'];
+                    _this3.config = d.data['config'];
                     var temp = d.data['content'];
                     if (temp) {
                         temp = temp.content;
-                        _this2.content = eval("(" + temp + ")");
-                        _this2.time.loadOff = false; //关闭加载时间的记录
+                        _this3.content = eval("(" + temp + ")");
+                        _this3.time.loadOff = false; //关闭加载时间的记录
                     } else {
                         modal.toast({ message: '文章已被删除', duration: 3 });
                     }
@@ -32047,11 +32053,11 @@ exports.default = {
             });
         },
         loadBehavior: function loadBehavior() {
-            var _this3 = this;
+            var _this4 = this;
 
             _api2.default.loadbehavior(this.id, this.authorId).then(function (d) {
                 if (d.code == 0) {
-                    _this3.relation = d.data;
+                    _this4.relation = d.data;
                 } else {
                     modal.toast({ message: d.error_message, duration: 3 });
                 }
@@ -32061,11 +32067,11 @@ exports.default = {
         },
         // 点赞
         like: function like() {
-            var _this4 = this;
+            var _this5 = this;
 
             _api2.default.like({ articleId: this.id, operation: this.relation.islike ? 1 : 0 }).then(function (d) {
                 if (d.code == 0) {
-                    _this4.relation.islike = !_this4.relation.islike;
+                    _this5.relation.islike = !_this5.relation.islike;
                 } else {
                     modal.toast({ message: d.error_message, duration: 3 });
                 }
@@ -32075,11 +32081,11 @@ exports.default = {
         },
         // 不喜欢
         unlike: function unlike() {
-            var _this5 = this;
+            var _this6 = this;
 
             _api2.default.unlike({ articleId: this.id, type: this.relation.isunlike ? 1 : 0 }).then(function (d) {
                 if (d.code == 0) {
-                    _this5.relation.isunlike = !_this5.relation.isunlike;
+                    _this6.relation.isunlike = !_this6.relation.isunlike;
                 } else {
                     modal.toast({ message: d.error_message, duration: 3 });
                 }
@@ -32101,11 +32107,11 @@ exports.default = {
         },
         // 收藏
         collection: function collection() {
-            var _this6 = this;
+            var _this7 = this;
 
             _api2.default.collection({ articleId: this.id, publishedTime: this.date, operation: this.relation.iscollection ? 1 : 0 }).then(function (d) {
                 if (d.code == 0) {
-                    _this6.relation.iscollection = !_this6.relation.iscollection;
+                    _this7.relation.iscollection = !_this7.relation.iscollection;
                 } else {
                     modal.toast({ message: d.error_message, duration: 3 });
                 }
@@ -32115,22 +32121,22 @@ exports.default = {
         },
         // 转发
         forward: function forward() {
-            var _this7 = this;
+            var _this8 = this;
 
             _api2.default.forward({ articleId: this.id }).then(function (d) {
-                _this7.test.isforward = !_this7.test.isforward;
+                _this8.test.isforward = !_this8.test.isforward;
             }).catch(function (e) {
                 console.log(e);
             });
         },
         // 关注
         follow: function follow() {
-            var _this8 = this;
+            var _this9 = this;
 
             _api2.default.follow({ articleId: this.id, authorId: this.authorId, operation: this.relation.isfollow ? 1 : 0 }).then(function (d) {
                 if (d.code == 0) {
-                    _this8.relation.isfollow = !_this8.relation.isfollow;
-                    modal.toast({ message: _this8.relation.isfollow ? '成功关注' : '成功取消关注', duration: 3 });
+                    _this9.relation.isfollow = !_this9.relation.isfollow;
+                    modal.toast({ message: _this9.relation.isfollow ? '成功关注' : '成功取消关注', duration: 3 });
                 } else {
                     modal.toast({ message: d.error_message, duration: 3 });
                 }
@@ -34726,6 +34732,7 @@ exports.default = {
                 _api2.default.login(this.params).then(function (d) {
                     if (d.code == 200) {
                         _this.$store.setToken(d.data.token);
+                        // alert(d.data.token)
                         _this.$router.push("/home");
                     } else {
                         modal.toast({ message: '用户或密码错误', duration: 3 });
