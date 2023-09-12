@@ -68,10 +68,10 @@ const config = {
           '^/user': ''
         }
       },'/login': {
-        target: 'http://'+ip+':51802/', //源地址
+        target: 'http://'+ip+':51601/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/login': ''
+          '^/login': '/user'
         }
       }
     },

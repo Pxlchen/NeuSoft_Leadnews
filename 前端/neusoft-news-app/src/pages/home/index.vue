@@ -185,7 +185,6 @@
       },
       // 列表项点击事件
       wxcPanItemClicked(item){
-
         this.$router.push({
           name:'article-info',
           params:item

@@ -30404,7 +30404,6 @@ exports.default = {
 
     // 列表项点击事件
     wxcPanItemClicked: function wxcPanItemClicked(item) {
-
       this.$router.push({
         name: 'article-info',
         params: item
@@ -34991,25 +34990,26 @@ exports.default = {
             modal.toast({ message: '该功能暂未实现！', duration: 3 });
         },
         login: function login() {
-            this.$router.push("/home");
-            // if(this.params.phone==''||this.params.password==''){
-            //     modal.toast({
-            //         message:'请输入用户名或密码',
-            //         duration:3
-            //     })
-            // }else{
-            //     alert(JSON.stringify(this.params))
-            //     Api.login(this.params).then(d=>{
-            //         if(d.code==0){
-            //             this.$store.setToken(d.data.token)
-            //             this.$router.push("/home")
-            //         }else{
-            //             modal.toast({ message:'用户或密码错误',duration:3})
-            //         }
-            //     }).catch(e=>{
-            //         console.log(e)
-            //     })
-            // }
+            var _this = this;
+
+            if (this.params.phone == '' || this.params.password == '') {
+                modal.toast({
+                    message: '请输入用户名或密码',
+                    duration: 3
+                });
+            } else {
+                // alert(JSON.stringify(this.params))
+                _api2.default.login(this.params).then(function (d) {
+                    if (d.code == 200) {
+                        _this.$store.setToken(d.data.token);
+                        _this.$router.push("/home");
+                    } else {
+                        modal.toast({ message: '用户或密码错误', duration: 3 });
+                    }
+                }).catch(function (e) {
+                    console.log(e);
+                });
+            }
         }
     }
 };
