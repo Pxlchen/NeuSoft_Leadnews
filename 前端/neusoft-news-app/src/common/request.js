@@ -19,7 +19,7 @@ Request.prototype={
     // 自动设置设备主键
     postByEquipmentId : function(url,body){
         return this.store.getEquipmentId().then(equipmentId=>{
-            body['equipment_id']=equipmentId
+            body['equipmentId']=equipmentId
             return new Promise((resolve, reject) => {
                 this.post(url,body).then((d)=>{
                     resolve(d);

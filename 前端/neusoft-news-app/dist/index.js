@@ -5462,12 +5462,13 @@ var config = {
     // 注册对应服务名称
     services: {
         article: 'ARTICLE',
+        search: 'SEARCH',
         behavior: 'BEHAVIOR',
         user: 'USER',
         login: 'LOGIN'
     },
     // 请求本地的请求service
-    local: { user: true, article: true, behavior: true, login: true },
+    local: { user: true, search: true, article: true, behavior: true, login: true },
     // 代理前缀
     prefix: {
         server_85: '/server_85'
@@ -5478,12 +5479,12 @@ var config = {
         loadnew: { url: 'api/v1/article/loadnew/', sv: 'article' },
         load_article_info: { url: 'api/v1/article/load_article_info/', sv: 'article' },
         load_article_behavior: { url: 'api/v1/article/load_article_behavior/', sv: 'article' },
-        load_search_history: { url: 'api/v1/article/search/load_search_history/', sv: 'article' },
-        del_search: { url: 'api/v1/article/search/del_search/', sv: 'article' },
+        load_search_history: { url: 'search/api/v1/history/load/', sv: 'search' },
+        del_search: { url: 'search/api/v1/history/del/', sv: 'search' },
         clear_search: { url: 'api/v1/article/search/clear_search/', sv: 'article' },
-        associate_search: { url: 'api/v1/article/search/associate_search/', sv: 'article' },
+        associate_search: { url: 'search/api/v1/associate/search/', sv: 'search' },
         load_hot_keywords: { url: 'api/v1/article/search/load_hot_keywords/', sv: 'article' },
-        article_search: { url: 'api/v1/article/search/article_search/', sv: 'article' },
+        article_search: { url: 'search/api/v1/article/search/search/', sv: 'search' },
         // ==========  behavior
         show_behavior: { url: 'api/v1/behavior/show_behavior/', sv: 'behavior' },
         read_behavior: { url: 'api/v1/behavior/read_behavior/', sv: 'behavior' },
@@ -5558,7 +5559,7 @@ Request.prototype = {
         var _this = this;
 
         return this.store.getEquipmentId().then(function (equipmentId) {
-            body['equipment_id'] = equipmentId;
+            body['equipmentId'] = equipmentId;
             return new Promise(function (resolve, reject) {
                 _this.post(url, body).then(function (d) {
                     resolve(d);
@@ -30137,7 +30138,7 @@ exports.default = {
           comment: data[i].comment,
           authorId: data[i].authorId,
           source: data[i].authorName,
-          date: data[i].publish_time,
+          date: data[i].publishTime,
           type: ims.length == 2 ? 1 : ims.length,
           image: ims,
           staticUrl: data[i].staticUrl,
@@ -31824,93 +31825,8 @@ module.exports = {
     "position": "fixed",
     "zIndex": 999
   },
-  "art-bottom": {
-    "bottom": 0,
-    "position": "fixed",
-    "width": "750"
-  },
   "iframediv": {
     "height": 1000
-  },
-  "scroller": {
-    "flex": 1,
-    "flexDirection": "column",
-    "width": "750",
-    "paddingTop": "0",
-    "paddingRight": "20",
-    "paddingBottom": "0",
-    "paddingLeft": "20",
-    "marginTop": "90",
-    "marginRight": "0",
-    "marginBottom": "90",
-    "marginLeft": "0"
-  },
-  "title": {
-    "fontSize": "48",
-    "fontWeight": "bold",
-    "marginTop": "10",
-    "marginRight": "0",
-    "marginBottom": "10",
-    "marginLeft": "0"
-  },
-  "info": {
-    "marginTop": "20",
-    "lineHeight": "48",
-    "alignItems": "center",
-    "flexDirection": "row"
-  },
-  "head": {
-    "width": "48",
-    "height": "48",
-    "borderRadius": "48"
-  },
-  "more": {
-    "flexDirection": "column"
-  },
-  "author": {
-    "fontSize": "25",
-    "color": "#383839",
-    "marginLeft": "15"
-  },
-  "time": {
-    "fontSize": "21",
-    "color": "#b5b5b5",
-    "marginLeft": "15"
-  },
-  "empty": {
-    "flex": 1
-  },
-  "content": {
-    "flexDirection": "column",
-    "fontSize": "30",
-    "justifyContent": "flex-start",
-    "marginTop": "20",
-    "color": "#222222",
-    "wordWrap": "break-word"
-  },
-  "text": {
-    "marginTop": "15",
-    "marginRight": "0",
-    "marginBottom": "15",
-    "marginLeft": "0"
-  },
-  "image": {
-    "display": "inline-block",
-    "marginTop": "15",
-    "marginRight": "0",
-    "marginBottom": "15",
-    "marginLeft": "0",
-    "borderRadius": "5",
-    "height": "300"
-  },
-  "tools": {
-    "marginTop": "20",
-    "marginRight": "0",
-    "marginBottom": "30",
-    "marginLeft": "0",
-    "flexDirection": "row",
-    "height": "60",
-    "justifyContent": "center"
   }
 }
 
@@ -31963,22 +31879,7 @@ exports.default = {
         return {
             iframesrc: '',
             scrollerHeight: '500px',
-            icon: {
-                like: '\uF164',
-                unlike: '\uF1F6',
-                wechat: '\uF086',
-                friend: '\uF268'
-            },
-            imageHeight: {},
-            config: {}, //文章配置
-            content: {}, //文章内容
-            relation: {
-                islike: false,
-                isunlike: false,
-                iscollection: false,
-                isfollow: false,
-                isforward: false
-            }, //关系
+            //关系
             time: {
                 timer: null, //定时器
                 timerStep: 100, //定时器步长
@@ -31995,8 +31896,6 @@ exports.default = {
     created: function created() {
         // alert(this.token);
         _api2.default.setVue(this);
-        this.loadInfo();
-        this.loadBehavior();
         var _this = this;
         this.time.timer = setInterval(function () {
             _this.time.readDuration += _this.time.timerStep;
@@ -32018,174 +31917,7 @@ exports.default = {
         });
     },
 
-    methods: {
-        imageLoad: function imageLoad(item, e) {
-            console.log(item);
-            console.log(e);
-            if (e.success) {
-                if (e.size.naturalWidth > 150) {
-                    var height = parseInt(e.size.naturalHeight * (750 / e.size.naturalWidth)) + 'px';
-                    this.$set(this.imageHeight, item.value, height);
-                } else {
-                    this.$set(e.target, 'resize', 'contain');
-                }
-            }
-        },
-        loadInfo: function loadInfo() {
-            var _this3 = this;
-
-            _api2.default.loadinfo(this.id).then(function (d) {
-                if (d.code == 0) {
-                    _this3.config = d.data['config'];
-                    var temp = d.data['content'];
-                    if (temp) {
-                        temp = temp.content;
-                        _this3.content = eval("(" + temp + ")");
-                        _this3.time.loadOff = false; //关闭加载时间的记录
-                    } else {
-                        modal.toast({ message: '文章已被删除', duration: 3 });
-                    }
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        loadBehavior: function loadBehavior() {
-            var _this4 = this;
-
-            _api2.default.loadbehavior(this.id, this.authorId).then(function (d) {
-                if (d.code == 0) {
-                    _this4.relation = d.data;
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 点赞
-        like: function like() {
-            var _this5 = this;
-
-            _api2.default.like({ articleId: this.id, operation: this.relation.islike ? 1 : 0 }).then(function (d) {
-                if (d.code == 0) {
-                    _this5.relation.islike = !_this5.relation.islike;
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 不喜欢
-        unlike: function unlike() {
-            var _this6 = this;
-
-            _api2.default.unlike({ articleId: this.id, type: this.relation.isunlike ? 1 : 0 }).then(function (d) {
-                if (d.code == 0) {
-                    _this6.relation.isunlike = !_this6.relation.isunlike;
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 分享
-        share: function share(type) {
-            _api2.default.share({ articleId: this.id, type: type }).then(function (d) {
-                if (d.code == 0) {
-                    modal.toast({ message: '分享成功', duration: 3 });
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 收藏
-        collection: function collection() {
-            var _this7 = this;
-
-            _api2.default.collection({ articleId: this.id, publishedTime: this.date, operation: this.relation.iscollection ? 1 : 0 }).then(function (d) {
-                if (d.code == 0) {
-                    _this7.relation.iscollection = !_this7.relation.iscollection;
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 转发
-        forward: function forward() {
-            var _this8 = this;
-
-            _api2.default.forward({ articleId: this.id }).then(function (d) {
-                _this8.test.isforward = !_this8.test.isforward;
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 关注
-        follow: function follow() {
-            var _this9 = this;
-
-            _api2.default.follow({ articleId: this.id, authorId: this.authorId, operation: this.relation.isfollow ? 1 : 0 }).then(function (d) {
-                if (d.code == 0) {
-                    _this9.relation.isfollow = !_this9.relation.isfollow;
-                    modal.toast({ message: _this9.relation.isfollow ? '成功关注' : '成功取消关注', duration: 3 });
-                } else {
-                    modal.toast({ message: d.error_message, duration: 3 });
-                }
-            }).catch(function (e) {
-                console.log(e);
-            });
-        },
-        // 阅读行为
-        read: function read() {
-            clearInterval(this.time.timer);
-            _api2.default.read({ articleId: this.id, readDuration: this.time.readDuration, percentage: this.time.percentage, loadDuration: this.time.loadDuration });
-        },
-        formatDate: function formatDate(time) {
-            return this.$date.format13(time);
-        },
-        getStyle: function getStyle(item) {
-            if (item) {
-                if (typeof item == 'string') {
-                    try {
-                        item = item.replace(/(-.)/g, function ($1) {
-                            return $1.replace('-', '').toLocaleUpperCase();
-                        });
-                        item = eval('({' + item.replace(/-/ig, '') + '})');
-                    } catch (e) {
-                        console.log(e);
-                    }
-                }
-                return item;
-            } else {
-                return {};
-            }
-        },
-        getImgStyle: function getImgStyle(item) {
-            item = this.getStyle();
-            item['width'] = '750px';
-            item['height'] = '1px';
-            // 处理动态图片高度
-            var temp = this.imageHeight[item.value];
-            if (temp) {
-                item['height'] = temp;
-            }
-            return item;
-        },
-        scroller: function scroller(e) {
-            var y = Math.abs(e.contentOffset.y) + (_weexUi.Utils.env.getPageHeight() - 180);
-            var height = e.contentSize.height;
-            this.time.percentage = Math.max(parseInt(y * 100 / height), this.time.percentage);
-        }
-    }
+    methods: {}
 };
 
 /***/ }),
@@ -32899,135 +32631,14 @@ Api.prototype = {
     setVue: function setVue(vue) {
         this.vue = vue;
     },
-    // 保存展现行为数据
-    loadinfo: function loadinfo(articleId) {
-        var _this = this;
-
-        var url = this.vue.$config.urls.get('load_article_info');
-        return new Promise(function (resolve, reject) {
-            _this.vue.$request.post(url, { article_id: articleId }).then(function (d) {
-                resolve(d);
-            }).catch(function (e) {
-                reject(e);
-            });
-        });
-    },
-    // 加载文章关系信息
-    loadbehavior: function loadbehavior(articleId, authorId) {
-        var _this2 = this;
-
-        var url = this.vue.$config.urls.get('load_article_behavior');
-        return this.vue.$store.getEquipmentId().then(function (equipmentId) {
-            return new Promise(function (resolve, reject) {
-                _this2.vue.$request.post(url, { equipment_id: equipmentId, article_id: articleId, author_id: authorId }).then(function (d) {
-                    resolve(d);
-                }).catch(function (e) {
-                    reject(e);
-                });
-            });
-        }).catch(function (e) {
-            return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
-    // 喜欢、点赞
-    like: function like(data) {
-        var _this3 = this;
-
-        var url = this.vue.$config.urls.get('like_behavior');
-        return this.vue.$store.getEquipmentId().then(function (equipmentId) {
-            return new Promise(function (resolve, reject) {
-                _this3.vue.$request.post(url, { equipment_id: equipmentId, entry_id: data.articleId, type: 0, operation: data.operation }).then(function (d) {
-                    resolve(d);
-                }).catch(function (e) {
-                    reject(e);
-                });
-            });
-        }).catch(function (e) {
-            return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
-    // 不喜欢
-    unlike: function unlike(data) {
-        var _this4 = this;
-
-        var url = this.vue.$config.urls.get('unlike_behavior');
-        return this.vue.$store.getEquipmentId().then(function (equipmentId) {
-            return new Promise(function (resolve, reject) {
-                _this4.vue.$request.post(url, { equipment_id: equipmentId, article_id: data.articleId, type: data.type }).then(function (d) {
-                    resolve(d);
-                }).catch(function (e) {
-                    reject(e);
-                });
-            });
-        }).catch(function (e) {
-            return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
-    // 不喜欢
-    read: function read(data) {
-        var _this5 = this;
-
-        var url = this.vue.$config.urls.get('read_behavior');
-        return this.vue.$store.getEquipmentId().then(function (equipmentId) {
-            return new Promise(function (resolve, reject) {
-                _this5.vue.$request.post(url, {
-                    equipment_id: equipmentId,
-                    article_id: data.articleId,
-                    count: 1,
-                    read_duration: data.readDuration,
-                    percentage: data.percentage,
-                    load_duration: data.loadDuration
-                }).then(function (d) {
-                    resolve(d);
-                }).catch(function (e) {
-                    reject(e);
-                });
-            });
-        }).catch(function (e) {
-            return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
-    // 收藏
-    collection: function collection(data) {
-        var _this6 = this;
-
-        var url = this.vue.$config.urls.get('collection_behavior');
-        return this.vue.$store.getEquipmentId().then(function (equipmentId) {
-            return new Promise(function (resolve, reject) {
-                _this6.vue.$request.post(url, {
-                    equipment_id: equipmentId,
-                    entry_id: data.articleId,
-                    published_time: data.publishedTime,
-                    type: 0,
-                    operation: data.operation
-                }).then(function (d) {
-                    resolve(d);
-                }).catch(function (e) {
-                    reject(e);
-                });
-            });
-        }).catch(function (e) {
-            return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
     // 转发
     forward: function forward(data) {
-        var _this7 = this;
+        var _this = this;
 
         var url = this.vue.$config.urls.get('forward_behavior');
         return this.vue.$store.getEquipmentId().then(function (equipmentId) {
             return new Promise(function (resolve, reject) {
-                _this7.vue.$request.post(url, {
+                _this.vue.$request.post(url, {
                     equipment_id: equipmentId,
                     article_id: data.articleId
                 }).then(function (d) {
@@ -33044,12 +32655,12 @@ Api.prototype = {
     },
     // 分享
     share: function share(data) {
-        var _this8 = this;
+        var _this2 = this;
 
         var url = this.vue.$config.urls.get('share_behavior');
         return this.vue.$store.getEquipmentId().then(function (equipmentId) {
             return new Promise(function (resolve, reject) {
-                _this8.vue.$request.post(url, {
+                _this2.vue.$request.post(url, {
                     equipment_id: equipmentId,
                     article_id: data.articleId,
                     type: data.type
@@ -33061,24 +32672,6 @@ Api.prototype = {
             });
         }).catch(function (e) {
             return new Promise(function (resolve, reject) {
-                reject(e);
-            });
-        });
-    },
-
-    // 关注
-    follow: function follow(data) {
-        var _this9 = this;
-
-        var url = this.vue.$config.urls.get('user_follow');
-        return new Promise(function (resolve, reject) {
-            _this9.vue.$request.post(url, {
-                author_id: data.authorId,
-                operation: data.operation,
-                article_id: data.articleId
-            }).then(function (d) {
-                resolve(d);
-            }).catch(function (e) {
                 reject(e);
             });
         });
@@ -33339,7 +32932,7 @@ exports.default = {
             var _this2 = this;
 
             _api2.default.load_search_history().then(function (data) {
-                if (data.code == 0) {
+                if (data.code == 200) {
                     _this2.data.history = data.data;
                 } else {
                     modal.toast({ message: data.error_message, duration: 3 });
@@ -33354,7 +32947,7 @@ exports.default = {
             modal.confirm({ message: '确认要删除吗？' }, function (button) {
                 if (button == 'OK') {
                     _api2.default.del_search(id).then(function (data) {
-                        if (data.code == 0) {
+                        if (data.code == 200) {
                             modal.toast({ message: '删除成功', duration: 3 });
                             _this.load_search_history();
                         } else {
@@ -33371,7 +32964,7 @@ exports.default = {
             var _this3 = this;
 
             _api2.default.associate_search(val).then(function (data) {
-                if (data.code == 0) {
+                if (data.code == 200) {
                     _this3.data.keyword = val;
                     _this3.showTip = true;
                     _this3.data.tip = data.data;
@@ -33982,7 +33575,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._l((_vm.data), function(item) {
     return [_c('tip-cell', {
       attrs: {
-        "keyword": item.associate_words,
+        "keyword": item.associateWords,
         "search": _vm.search
       },
       on: {
@@ -34327,17 +33920,17 @@ Api.prototype = {
     // 加载搜索历史
     load_search_history: function load_search_history() {
         var url = this.vue.$config.urls.get('load_search_history');
-        return this.vue.$request.postByEquipmentId(url, { page_size: 5 });
+        return this.vue.$request.postByEquipmentId(url, { pageSize: 5 });
     },
     // 删除搜索词
     del_search: function del_search(id) {
         var url = this.vue.$config.urls.get('del_search');
-        return this.vue.$request.postByEquipmentId(url, { his_list: [{ id: id }] });
+        return this.vue.$request.postByEquipmentId(url, { searchId: id });
     },
     // 输入联想
     associate_search: function associate_search(searchWords) {
         var url = this.vue.$config.urls.get('associate_search');
-        return this.vue.$request.postByEquipmentId(url, { search_words: searchWords, page_size: 10 });
+        return this.vue.$request.postByEquipmentId(url, { searchWords: searchWords, pageSize: 10 });
     },
     // 加载热词
     load_hot_keywords: function load_hot_keywords() {
@@ -35409,11 +35002,12 @@ exports.default = {
                     id: data[i].id,
                     title: data[i].title,
                     comment: data[i].comment,
-                    authorId: data[i].author_id,
-                    source: data[i].author_name,
-                    date: data[i].publish_time,
+                    authorId: data[i].authorId,
+                    source: data[i].authorName,
+                    date: data[i].publishTime,
                     type: ims.length,
                     image: ims,
+                    staticUrl: data[i].staticUrl,
                     icon: "\uF06D"
                 };
                 arr.push(tmp);
@@ -35684,10 +35278,11 @@ Api.prototype = {
     article_search: function article_search(parms) {
         var url = this.vue.$config.urls.get('article_search');
         return this.vue.$request.postByEquipmentId(url, {
-            search_words: parms.keyword,
-            page_num: parms.pageNum,
+            minBehotTime: new Date().getTime(),
+            searchWords: parms.keyword,
+            pageNum: parms.pageNum,
             tag: parms.tag,
-            page_size: 20
+            pageSize: 20
         });
     }
 };

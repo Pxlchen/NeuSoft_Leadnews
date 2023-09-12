@@ -2,7 +2,7 @@
     <div class="body">
         <div class="content">
             <template v-for=" item in data">
-                <tip-cell @onClick="onClick" :keyword="item.associate_words" :search="search"></tip-cell>
+                <tip-cell @onClick="onClick" :keyword="item.associateWords" :search="search"></tip-cell>
             </template>
         </div>
     </div>

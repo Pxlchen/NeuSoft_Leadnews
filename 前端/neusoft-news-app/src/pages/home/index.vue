@@ -142,7 +142,7 @@
             comment:data[i].comment,
             authorId:data[i].authorId,
             source:data[i].authorName,
-            date:data[i].publish_time,
+            date:data[i].publishTime,
             type:ims.length==2?1:ims.length,
             image:ims,
 			staticUrl:data[i].staticUrl,
