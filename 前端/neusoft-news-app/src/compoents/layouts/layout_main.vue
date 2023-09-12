@@ -12,7 +12,7 @@
     import Menu from "@/compoents/menus/menu";
 
     export default {
-        name: 'HeiMa-Layout-Mian',
+        name: 'DONGRUAN-Layout-Mian',
         components: {Menu}
     }
 </script>

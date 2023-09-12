@@ -9,4 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "app端用户注册",tags = "app端用户注册")
 public class ApUserSingInController {
 
+
 }

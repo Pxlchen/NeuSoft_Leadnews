@@ -12315,7 +12315,7 @@ var _menu2 = _interopRequireDefault(_menu);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    name: 'HeiMa-Layout-Mian',
+    name: 'DONGRUAN-Layout-Mian',
     components: { Menu: _menu2.default }
 }; //
 //
@@ -35472,7 +35472,7 @@ var _font2 = _interopRequireDefault(_font);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  name: 'HeiMa-App',
+  name: 'DONRRUAN-App',
   created: function created() {
     _font2.default.initIconFont();
   }
