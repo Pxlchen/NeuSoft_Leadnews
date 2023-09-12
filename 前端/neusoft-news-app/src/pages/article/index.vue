@@ -1,33 +1,12 @@
 <template>
     <div class="art-page">
         <div class="art-top"><TopBar :text="title"/></div>
-        <scroller class="scroller" ref="scroller" @scroll="scroller" show-scrollbar="true">
-            <text class="title">{{title}}</text>
-            <div class="info">
-                <image src="https://p3.pstatp.com/thumb/1480/7186611868" class="head"></image>
-                <div class="more">
-                    <text class="author">{{source}}</text>
-                    <text class="time">{{formatDate(date)}}</text>
-                </div>
-                <div class="empty"></div>
-                <wxc-button class="button" v-if="relation.isfollow" @wxcButtonClicked="follow" text="取消关注" size="small"></wxc-button>
-                <wxc-button class="button" v-if="!relation.isfollow" @wxcButtonClicked="follow" text="+ 关注" size="small"></wxc-button>
-            </div>
-            <div class="content">
-                <template v-for="item in content">
-                    <text class="text" :style="getStyle(item.style)" v-if="item.type=='text'">{{item.value}}</text>
-                    <image @load="imageLoad(item,$event)" class="image" :style="{width:'710px',height:imageHeight[item.value]}" v-if="item.type=='image'" :src="item.value"></image>
-                </template>
-            </div>
-            <div class="tools">
-                <Button text="点赞" @onClick="like" :icon='icon.like' :active="relation.islike" active-text="取消赞"/>
-                <Button text="不喜欢" @onClick="unlike" :icon='icon.unlike' :active="relation.isunlike" />
-<!--                <Button text="微信" :icon='icon.wechat' @onClick="share(0)"/>-->
-<!--                <Button text="朋友圈" :icon='icon.friend' @onClick="share(1)"/>-->
-            </div>
-        </scroller>
-        <div class="art-bottom"><BottomBar :forward="test.isforward" @clickForward="forward"
-                                           :collection="relation.iscollection" @clickCollection="collection" /></div>
+        
+		<div class="iframediv">
+			<!-- <iframe  :src=></iframe> -->
+			<iframe class="iframe"  :src="iframesrc"  width="100%" frameborder="0" scrolling="auto"  :style="{height:'100vh'}"></iframe>
+
+		</div>
     </div>
 </template>
 
@@ -46,6 +25,7 @@
         props:['id','title','date','comment','type','source','authorId'],
         data(){
             return {
+				iframesrc:"http://192.168.200.130:9000/leadnews/2023/09/06/1699347696923578370.html",
                 scrollerHeight:'500px',
                 icon : {
                     like : '\uf164',
@@ -258,6 +238,7 @@
         bottom: 0;
         width: 750px;
         flex-direction: column;
+		
     }
     .art-top{
         top: 0;
@@ -270,6 +251,13 @@
         position: fixed;
         width: 750px;
     }
+	.iframediv{
+		height: 1000rpx;
+		width: auto;
+	}
+	#iframe{
+		height: 100%;
+	}
     .scroller{
         flex: 1;
         flex-direction: column;

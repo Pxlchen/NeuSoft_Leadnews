@@ -4379,7 +4379,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-text.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-text.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-7cb75ac2"
@@ -4423,7 +4427,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-29e510b1"
@@ -4999,7 +5007,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-checkbox\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-checkbox\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-30c69e5a"
@@ -5171,7 +5183,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-tag.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-tag.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2fe9c898"
@@ -5215,7 +5231,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\tabs\\home_tabs.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\tabs\\home_tabs.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-41f2f9ba"
@@ -5259,7 +5279,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_0.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_0.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-589b8e12"
@@ -5303,7 +5327,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_1.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_1.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-58a9a593"
@@ -5347,7 +5375,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_3.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\article_3.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-58c5d495"
@@ -12260,7 +12292,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\layouts\\layout_main.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\layouts\\layout_main.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-02f06c11"
@@ -12355,7 +12391,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\menus\\menu.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\menus\\menu.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-ee686efe"
@@ -13314,7 +13354,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-button\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-button\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-77c133fc"
@@ -13576,7 +13620,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-cell\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-cell\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-63bed4b2"
@@ -14154,7 +14202,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-checkbox-list\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-checkbox-list\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -14313,7 +14365,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-city\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-city\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2a15a50a"
@@ -14715,7 +14771,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-city\\tab.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-city\\tab.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-ff138a04"
@@ -14932,7 +14992,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-searchbar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-searchbar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-788a9a37"
@@ -15559,7 +15623,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-result\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-result\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-9b19c5a6"
@@ -15893,7 +15961,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-indexlist\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-indexlist\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1227ba08"
@@ -16583,7 +16655,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-countdown\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-countdown\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-15ee4906"
@@ -16964,7 +17040,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-dialog\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-dialog\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-072b1898"
@@ -17310,7 +17390,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-overlay\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-overlay\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-5dc5d348"
@@ -17622,7 +17706,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-ep-slider\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-ep-slider\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-30efe70f"
@@ -18190,7 +18278,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-page\\full-page.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-page\\full-page.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-6a618012"
@@ -18689,7 +18781,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-grid-select\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-grid-select\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-39973ea2"
@@ -18902,7 +18998,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-grid-select\\option.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-grid-select\\option.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-a962fa30"
@@ -19204,7 +19304,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-icon\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-icon\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-12c9d709"
@@ -19429,7 +19533,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lightbox\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lightbox\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-d2bf30f6"
@@ -19603,7 +19711,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-mask\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-mask\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1d536dbc"
@@ -20058,7 +20170,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-loading\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-loading\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-12fb7c48"
@@ -20396,7 +20512,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lottery-rain\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lottery-rain\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2d73d968"
@@ -20518,7 +20638,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lottery-rain\\rain-item.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-lottery-rain\\rain-item.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-a4fd1b7c"
@@ -20984,7 +21108,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-minibar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-minibar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-e026d130"
@@ -21300,7 +21428,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-noticebar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-noticebar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-ea6a51f2"
@@ -21665,7 +21797,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-page-calendar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-page-calendar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-be1e1d70"
@@ -22559,7 +22695,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-pan-item\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-pan-item\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -22747,7 +22887,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-part-loading\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-part-loading\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -22888,7 +23032,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-popover\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-popover\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-e97beb1e"
@@ -23402,7 +23550,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-popup\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-popup\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-ef24f190"
@@ -23755,7 +23907,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-progress\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-progress\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-6fb0dabd"
@@ -23947,7 +24103,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-radio\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-radio\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-7ab2d872"
@@ -24096,7 +24256,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-radio\\item.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-radio\\item.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-6c5a49a4"
@@ -24375,7 +24539,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-refresher\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-refresher\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-5c48c954"
@@ -24802,7 +24970,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-51a39eec"
@@ -25087,7 +25259,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-link.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-link.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -25224,7 +25400,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-icon.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-rich-text\\wxc-rich-text-icon.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-5d0a782a"
@@ -25683,7 +25863,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-simple-flow\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-simple-flow\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-172fef96"
@@ -26087,7 +26271,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-slide-nav\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-slide-nav\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2f2d0cd3"
@@ -26429,7 +26617,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-slider-bar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-slider-bar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1e3a70b7"
@@ -27175,7 +27367,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-special-rich-text\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-special-rich-text\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-7a14a914"
@@ -27598,7 +27794,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-stepper\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-stepper\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-53770b9d"
@@ -27951,7 +28151,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-swipe-action\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-swipe-action\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-e7d35e8e"
@@ -28311,7 +28515,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-bar\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-bar\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-dc8303b2"
@@ -28804,7 +29012,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-page\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tab-page\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-57f519d7"
@@ -29414,7 +29626,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tag\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\node_modules\\weex-ui\\packages\\wxc-tag\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-a90327b4"
@@ -29824,7 +30040,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\home\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\home\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-4ec60fb3"
@@ -30220,7 +30440,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\home_bar.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\home_bar.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1bb3e3f6"
@@ -30334,7 +30558,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search_buttion.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search_buttion.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-4e505c87"
@@ -31786,7 +32014,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\article\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\article\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-735ff93e"
@@ -31827,6 +32059,9 @@ module.exports = {
     "bottom": 0,
     "position": "fixed",
     "width": "750"
+  },
+  "iframediv": {
+    "height": 1000
   },
   "scroller": {
     "flex": 1,
@@ -31953,27 +32188,6 @@ var modal = weex.requireModule("modal"); //
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 exports.default = {
     name: "index",
@@ -31981,6 +32195,7 @@ exports.default = {
     props: ['id', 'title', 'date', 'comment', 'type', 'source', 'authorId'],
     data: function data() {
         return {
+            iframesrc: "http://192.168.200.130:9000/leadnews/2023/09/06/1699347696923578370.html",
             scrollerHeight: '500px',
             icon: {
                 like: '\uF164',
@@ -32227,7 +32442,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\article_top_bar.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\article_top_bar.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-39d170fe"
@@ -32387,7 +32606,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\article_bottom_bar.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\article_bottom_bar.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-0fc37d3a"
@@ -32762,7 +32985,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\buttons\\button.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\buttons\\button.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-6d366b27"
@@ -33112,102 +33339,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "text": _vm.title
     }
-  })], 1), _c('scroller', {
-    ref: "scroller",
-    staticClass: ["scroller"],
-    attrs: {
-      "showScrollbar": "true"
+  })], 1), _c('div', {
+    staticClass: ["iframediv"]
+  }, [_c('iframe', {
+    staticClass: ["iframe"],
+    style: {
+      height: '100vh'
     },
-    on: {
-      "scroll": _vm.scroller
-    }
-  }, [_c('text', {
-    staticClass: ["title"]
-  }, [_vm._v(_vm._s(_vm.title))]), _c('div', {
-    staticClass: ["info"]
-  }, [_c('image', {
-    staticClass: ["head"],
     attrs: {
-      "src": "https://p3.pstatp.com/thumb/1480/7186611868"
-    }
-  }), _c('div', {
-    staticClass: ["more"]
-  }, [_c('text', {
-    staticClass: ["author"]
-  }, [_vm._v(_vm._s(_vm.source))]), _c('text', {
-    staticClass: ["time"]
-  }, [_vm._v(_vm._s(_vm.formatDate(_vm.date)))])]), _c('div', {
-    staticClass: ["empty"]
-  }), (_vm.relation.isfollow) ? _c('wxc-button', {
-    staticClass: ["button"],
-    attrs: {
-      "text": "取消关注",
-      "size": "small"
-    },
-    on: {
-      "wxcButtonClicked": _vm.follow
-    }
-  }) : _vm._e(), (!_vm.relation.isfollow) ? _c('wxc-button', {
-    staticClass: ["button"],
-    attrs: {
-      "text": "+ 关注",
-      "size": "small"
-    },
-    on: {
-      "wxcButtonClicked": _vm.follow
-    }
-  }) : _vm._e()], 1), _c('div', {
-    staticClass: ["content"]
-  }, [_vm._l((_vm.content), function(item) {
-    return [(item.type == 'text') ? _c('text', {
-      staticClass: ["text"],
-      style: _vm.getStyle(item.style)
-    }, [_vm._v(_vm._s(item.value))]) : _vm._e(), (item.type == 'image') ? _c('image', {
-      staticClass: ["image"],
-      style: {
-        width: '710px',
-        height: _vm.imageHeight[item.value]
-      },
-      attrs: {
-        "src": item.value
-      },
-      on: {
-        "load": function($event) {
-          _vm.imageLoad(item, $event)
-        }
-      }
-    }) : _vm._e()]
-  })], 2), _c('div', {
-    staticClass: ["tools"]
-  }, [_c('Button', {
-    attrs: {
-      "text": "点赞",
-      "icon": _vm.icon.like,
-      "active": _vm.relation.islike,
-      "activeText": "取消赞"
-    },
-    on: {
-      "onClick": _vm.like
-    }
-  }), _c('Button', {
-    attrs: {
-      "text": "不喜欢",
-      "icon": _vm.icon.unlike,
-      "active": _vm.relation.isunlike
-    },
-    on: {
-      "onClick": _vm.unlike
-    }
-  })], 1)]), _c('div', {
-    staticClass: ["art-bottom"]
-  }, [_c('BottomBar', {
-    attrs: {
-      "forward": _vm.test.isforward,
-      "collection": _vm.relation.iscollection
-    },
-    on: {
-      "clickForward": _vm.forward,
-      "clickCollection": _vm.collection
+      "src": _vm.iframesrc,
+      "width": "100%",
+      "frameborder": "0",
+      "scrolling": "auto"
     }
   })], 1)])
 },staticRenderFns: []}
@@ -33240,7 +33383,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\search\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\search\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-b3462088"
@@ -33532,7 +33679,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\search_top.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\search_top.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-2a6358e0"
@@ -33696,7 +33847,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_0.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_0.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-197e6b3e"
@@ -33839,7 +33994,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search_tip.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\inputs\\search_tip.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-01c003e6"
@@ -33944,7 +34103,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_2.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_2.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-199a9a40"
@@ -34116,7 +34279,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_1.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\cells\\search_1.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-198c82bf"
@@ -34300,7 +34467,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\titles\\title.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\titles\\title.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-cf3489de"
@@ -34629,7 +34800,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\login\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\login\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-618d2e71"
@@ -34892,7 +35067,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\login_top_bar.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\login_top_bar.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-1a876871"
@@ -35109,7 +35288,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\load_screen\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\load_screen\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-6bfe2a6d"
@@ -35230,7 +35413,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\pages\\search_result\\index.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\pages\\search_result\\index.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-99294448"
@@ -35584,7 +35771,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\search_result_top.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\compoents\\bars\\search_result_top.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__._scopeId = "data-v-4637d870"
@@ -35937,7 +36128,11 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
+<<<<<<< HEAD
 __vue_options__.__file = "D:\\1.JavaRoute\\a.Item\\Neusoft_Leadnews\\前端\\neusoft-news-app\\src\\main.vue"
+=======
+__vue_options__.__file = "E:\\Application\\Git\\neusoft-news\\neu-soft_-leadnews\\前端\\neusoft-news-app\\src\\main.vue"
+>>>>>>> 1fa205f51fdb392c3e3826759192673b39ea1972
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
