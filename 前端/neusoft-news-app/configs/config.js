@@ -56,7 +56,7 @@ const config = {
           '^/article': ''
         }
       },'/behavior': {
-        target: 'http://'+ip+':51802/', //源地址
+        target: 'http://'+ip+':51902/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
           '^/behavior': ''
