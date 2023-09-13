@@ -1,6 +1,5 @@
 package com.neusoft.model.user.dtos;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 @Data
@@ -19,12 +18,12 @@ public class SignInDto {
     /**
      * 学号或者教师号
      */
-    private Integer number;
+    private String number;
 
     /**
      * 身份证号
      */
-    private Integer idNumber;
+    private String idNumber;
 
     /**
      * 密码,md5加密
