@@ -2,6 +2,7 @@ export default {
     tabTitles: [
         {
             title: '主页',
+            url:'/home',
             icon:'\uf015'
         },
         {
@@ -15,6 +16,7 @@ export default {
         },
         {
             title: '我的',
+            url:'/user',
             dot: true,
             icon:'\uf007'
         }

@@ -22,6 +22,7 @@ Request.prototype={
             body['equipmentId']=equipmentId
             return new Promise((resolve, reject) => {
                 this.post(url,body).then((d)=>{
+                    //console.log(d)
                     resolve(d);
                 }).catch((e)=>{
                     reject(e);

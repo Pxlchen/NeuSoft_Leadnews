@@ -2,6 +2,8 @@ function Cache(){
     this.storage=null;
     this.tokenKey = "TOKEN_KEY"
     this.equipmentidKey = "EQUIPMENTID_KEY"
+    this.user="User"
+    this.showSidebar="sidebar"
 }
 Cache.prototype={
     setToken : function(token){
@@ -9,6 +11,18 @@ Cache.prototype={
     },
     getToken : function(){
         return this.__getItem(this.tokenKey);
+    },
+    setUserInfo:function (user){
+        return this.__setItem(this.user,user);
+    },
+    getUserInfo:function (){
+        return this.__getItem(this.user);
+    },
+    setShowSidebar:function (sidebar){
+        return this.__setItem(this.showSidebar,sidebar);
+    },
+    getShowSidebar:function (){
+        return this.__getItem(this.showSidebar);
     },
     setEquipmentId : function(equipmentId){
         return this.__setItem(this.equipmentidKey,equipmentId);

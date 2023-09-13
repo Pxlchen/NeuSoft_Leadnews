@@ -35,6 +35,7 @@ const  config = {
         collection_behavior:{url:'api/v1/behavior/collection_behavior/',sv:'behavior'},
         // ==========  user
         user_follow:{url:'api/v1/user/user_follow/',sv:'user'},
+        user_information:{url:'api/v1/user/information/',sv:'user'},
         // ==========  login
         user_login:{url:'api/v1/login/login_auth/',sv:'login'},
         // 解决多访问地址的问题
