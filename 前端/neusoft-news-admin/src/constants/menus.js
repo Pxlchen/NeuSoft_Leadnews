@@ -35,5 +35,5 @@ export  const  MenuData = [
       { title:'操作日志' , path : '/fans/info3'}
     ]
   },
-  { title:'黑马大屏',path:'/screen',icon:'el-icon-full-screen'}
+  { title:'东软资讯大屏',path:'/screen',icon:'el-icon-full-screen'}
 ]
