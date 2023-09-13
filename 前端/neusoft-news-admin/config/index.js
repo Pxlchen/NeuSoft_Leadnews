@@ -12,7 +12,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+<<<<<<< HEAD
       '/server_85/ADMIN': {
+=======
+      '/server_85/admin': {
+>>>>>>> 6262ea85e2bb1485134088b3b422589bae96036e
         target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {

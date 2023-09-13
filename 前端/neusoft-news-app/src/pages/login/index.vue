@@ -56,26 +56,31 @@
                 modal.toast({ message:'该功能暂未实现！',duration:3})
             },
             login:function(){
-				this.$router.push("/home")
-                // if(this.params.phone==''||this.params.password==''){
-                //     modal.toast({
-                //         message:'请输入用户名或密码',
-                //         duration:3
-                //     })
-                // }else{
-                //     alert(JSON.stringify(this.params))
-                //     Api.login(this.params).then(d=>{
-                //         if(d.code==0){
-                //             this.$store.setToken(d.data.token)
-                //             this.$router.push("/home")
-                //         }else{
-                //             modal.toast({ message:'用户或密码错误',duration:3})
-                //         }
-                //     }).catch(e=>{
-                //         console.log(e)
-                //     })
-                // }
-            }
+
+                if(this.params.phone==''||this.params.password==''){
+                    modal.toast({
+                        message:'请输入用户名或密码',
+                        duration:3
+                    })
+                }else{
+                    // alert(JSON.stringify(this.params))
+                    Api.login(this.params).then(d=>{
+                        if(d.code==200){
+                          this.$store.setToken(d.data.token)
+                          this.$store.setUserInfo(JSON.stringify(d.data.user))
+                          console.log(JSON.stringify(d.data.user))
+                          this.$router.push("/home")
+                            this.$store.setToken(d.data.token)
+							// alert(d.data.token)
+                            this.$router.push("/home")
+                        }else{
+                            modal.toast({ message:'用户或密码错误',duration:3})
+                        }
+                    }).catch(e=>{
+                        console.log(e)
+                    })
+                }
+            },
         }
     }
 </script>

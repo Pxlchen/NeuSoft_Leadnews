@@ -102,11 +102,12 @@
                         id:data[i].id,
                         title:data[i].title,
                         comment:data[i].comment,
-                        authorId:data[i].author_id,
-                        source:data[i].author_name,
-                        date:data[i].publish_time,
+                        authorId:data[i].authorId,
+                        source:data[i].authorName,
+                        date:data[i].publishTime,
                         type:ims.length,
                         image:ims,
+						staticUrl:data[i].staticUrl,
                         icon:'\uf06d'
                     }
                     arr.push(tmp);

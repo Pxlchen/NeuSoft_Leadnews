@@ -89,7 +89,7 @@ public class ApUser implements Serializable {
     /**
      * 0 普通用户
             1 自媒体人
-            2 大V
+     2 大V
      */
     @TableField("flag")
     private Short flag;
@@ -99,5 +99,17 @@ public class ApUser implements Serializable {
      */
     @TableField("created_time")
     private Date createdTime;
+
+    /**
+     * 学号或者教师号
+     */
+    @TableField("number")
+    private String number;
+
+    /**
+     * 身份证号
+     */
+    @TableField("id_number")
+    private String idNumber;
 
 }

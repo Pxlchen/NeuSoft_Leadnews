@@ -11,7 +11,6 @@
                  :accessible="true"
                  :aria-label="`${v.title?v.title:'标签'+index}`">
                 <text class="icon" :style="{color:getFillColor(index)}">{{v.icon}}</text>
-
                 <text
                         v-if="!titleUseSlot"
                         :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
@@ -141,11 +140,13 @@
                     return this.tabStyles.iconColor;
                 }
             },
-            setPage(page, url = null, animated = true) {
+            setPage(page, url, animated = true) {
                 this.currentPage = page;
-                if(page>0){
-                    this.$config.noAction();
+                if(page==1||page==2){
+                    this.$config.noAction(url);
                 }
+              this.$router.push(url)
+
             }
         }
     };

@@ -9,10 +9,11 @@ Api.prototype = {
     article_search: function(parms){
         let url = this.vue.$config.urls.get('article_search')
         return this.vue.$request.postByEquipmentId(url,{
-            search_words:parms.keyword,
-            page_num:parms.pageNum,
+			minBehotTime: new Date().getTime(),
+            searchWords:parms.keyword,
+            pageNum:parms.pageNum,
             tag:parms.tag,
-            page_size:20
+            pageSize:20
         })
     }
 }
