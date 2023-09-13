@@ -109,7 +109,7 @@ public class ApUser implements Serializable {
     /**
      * 身份证号
      */
-    @TableField("idNumber")
+    @TableField("id_number")
     private Integer idNumber;
 
 }
