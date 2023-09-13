@@ -8,7 +8,7 @@
   import util from "@/utils/font"
 
 export default {
-  name: 'HeiMa-App',
+  name: 'DONRRUAN-App',
   created () {
     util.initIconFont();
   }

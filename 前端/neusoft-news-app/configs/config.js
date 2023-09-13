@@ -50,19 +50,25 @@ const config = {
         target: 'http://heima-app-java.research.itcast.cn', //源地址
         changeOrigin: true
       },'/article': {
-        target: 'http://'+ip+':51802/', //源地址
+        target: 'http://'+ip+':51601/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/article': ''
+          '': ''
         }
       },'/behavior': {
-        target: 'http://'+ip+':51902/', //源地址
+        target: 'http://'+ip+':51601/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
           '^/behavior': ''
         }
+      },'/search': {
+        target: 'http://'+ip+':51601/', //源地址
+        changeOrigin: true, //改变源
+        pathRewrite: {
+          '^/search': ''
+        }
       },'/user': {
-        target: 'http://'+ip+':51801/', //源地址
+        target: 'http://'+ip+':51601/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
           '^/user': ''
