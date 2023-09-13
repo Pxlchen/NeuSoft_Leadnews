@@ -1,6 +1,6 @@
 # heima-leadnews-wemedia
 
-> 黑马头条自媒体端
+> 东软资讯自媒体端
 
 ## Build Setup
 
