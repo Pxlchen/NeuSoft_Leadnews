@@ -79,7 +79,7 @@ public class ApUserSingInServiceImpl implements ApUserSingInService {
         //进行注册
         //生成1-6位的盐
         String salt = RandomStringUtils.randomNumeric(6);
-        log.info("盐的为：{}", salt);
+//        log.info("盐的为：{}", salt);
         //将前端传过来的密码与盐进行加密
         String dbPassword = DigestUtils.md5DigestAsHex((dto.getPassword() + salt).getBytes());
         dto.setPassword(dbPassword);
