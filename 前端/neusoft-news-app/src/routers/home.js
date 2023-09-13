@@ -6,6 +6,7 @@ import Search from '@/pages/search/index'
 import Login from '@/pages/login/index'
 import Screen from '@/pages/load_screen/index'
 import SearchResult from '@/pages/search_result/index'
+import UserInfo from "@/pages/user/userInfo.vue";
 
 let routes = [
     {
@@ -16,9 +17,17 @@ let routes = [
                 path:'/home',
                 name:'Home',
                 component: Home
+            },
+            {
+                path: '/user',
+                name: 'User-Home',
+                component: UserInfo,
+                props: true
             }
+
         ]
-    },{
+    },
+    {
         path:'/screen',
         name: 'screen',
         component:Screen
@@ -42,7 +51,8 @@ let routes = [
         name: 'search_result',
         component:SearchResult,
         props:true
-    }
+    },
+
 ]
 
 export default routes;

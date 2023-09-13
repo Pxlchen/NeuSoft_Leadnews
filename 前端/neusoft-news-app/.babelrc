@@ -2,6 +2,13 @@
   "presets": [
     "es2015",
     "stage-0"
+  ],
+  "plugins": [
+    ["import", {
+      "libraryName": "vant",
+      "libraryDirectory": "es",
+      "style": true
+    }]
   ]
 
 }
