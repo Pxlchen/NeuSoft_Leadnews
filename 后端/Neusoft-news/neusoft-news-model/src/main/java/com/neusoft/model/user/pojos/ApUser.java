@@ -104,12 +104,12 @@ public class ApUser implements Serializable {
      * 学号或者教师号
      */
     @TableField("number")
-    private Integer number;
+    private String number;
 
     /**
      * 身份证号
      */
-    @TableField("idNumber")
-    private Integer idNumber;
+    @TableField("id_number")
+    private String idNumber;
 
 }

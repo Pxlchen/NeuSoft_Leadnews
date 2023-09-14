@@ -6,7 +6,7 @@
 <script>
   export default {
     mounted() {
-      document.title='欢迎登录-黑马头条平台管理系统'
+      document.title='欢迎登录-东软资讯平台管理系统'
     }
   }
 </script>
