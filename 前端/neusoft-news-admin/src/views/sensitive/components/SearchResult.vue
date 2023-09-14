@@ -13,7 +13,7 @@
       <el-table-column
         label="创建时间">
         <template slot-scope="scope">
-          <span>{{ dateFormat(scope.row.created_time) }}</span>
+          <span>{{ dateFormat(scope.row.createdTime) }}</span>
         </template>
       </el-table-column>
       <el-table-column label="操作"
@@ -84,10 +84,11 @@ export default {
       this.id.value = id;
       let params = {
         name:this.table,
+		id:id,
         where:[this.id]
       }
       let res = await deleteData(params)
-      if(res.code==0){
+      if(res.code==200){
         this.deleteData(id);
         this.$message({type:'success',message:'操作成功！'});
       }else{

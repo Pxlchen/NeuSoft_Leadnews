@@ -26,7 +26,7 @@
     data() {
       return {
         params:{
-          name:'AD_SENSITIVE',
+          name:'AD_SENSITIVE_',
           page:1,
           size:10,
           where:[]
@@ -39,7 +39,7 @@
             { required: true, message: '请输入敏感词', trigger: 'blur' },
               { min: 2, max:8,message: '敏感词在2~8个字符', trigger: 'blur' }
             ]},
-          {label:'创建时间',name:'created_time',type:'hidden',value:DateUtil.format13HH(new Date().getTime())}
+          {label:'创建时间',name:'createdTime',type:'hidden',value:DateUtil.format13HH(new Date().getTime())}
         ]
       }
     },
@@ -65,7 +65,7 @@
       },
       changeParam :function(e){
         this.params.page=1
-        this.params.where[0]=e
+        this.params.name+=e.value
         this.loadData()
       },
       changePage :function(e){
@@ -74,10 +74,10 @@
       },
       async loadData() {
         let res = await loadList({...this.params});
-        if (res.code == 0) {
-          this.list = res.data.list
+        if (res.code == 200) {
+          this.list = res.data
           this.host = res.host
-          this.total = res.data.total //总记录数
+          this.total = res.total //总记录数
         } else {
           this.$message({type: 'error', message: res.error_message})
         }

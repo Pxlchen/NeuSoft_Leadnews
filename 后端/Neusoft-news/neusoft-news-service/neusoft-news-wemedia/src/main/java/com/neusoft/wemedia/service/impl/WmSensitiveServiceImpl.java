@@ -58,11 +58,11 @@ public class WmSensitiveServiceImpl extends ServiceImpl<WmSensitiveMapper, WmSen
     @Override
     public ResponseResult updateSensitive(AdSensitiveDto dto) {
         //判断参数是否为空
-        if (dto == null || dto.getId() == null || dto.getSensitives() == null){
+        if (dto == null || dto.getRequestId() == null || dto.getSensitives() == null){
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
         }
         //判断敏感词是否存在
-        WmSensitive sensitive = getById(dto.getId());
+        WmSensitive sensitive = getById(dto.getRequestId());
         if (sensitive == null){
             return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST);
         }

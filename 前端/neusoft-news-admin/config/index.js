@@ -12,11 +12,21 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-<<<<<<< HEAD
-      '/server_85/ADMIN': {
-=======
+		'/server_85/admin/user': {
+		  target: 'http://localhost:51603/', //源地址
+		  changeOrigin: true, //改变源
+		  pathRewrite: {
+		    '^/server_85/admin': ''
+		  }
+		},
+		'/server_85/admin/wemedia': {
+		  target: 'http://localhost:51603/', //源地址
+		  changeOrigin: true, //改变源
+		  pathRewrite: {
+		    '^/server_85/admin': ''
+		  }
+		},
       '/server_85/admin': {
->>>>>>> 6262ea85e2bb1485134088b3b422589bae96036e
         target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
@@ -25,7 +35,7 @@ module.exports = {
       },
 	  
 	  '/server_85/ADMIN/api/v1/admin/auth/list': {
-	    target: 'http://localhost:51601/', //源地址
+	    target: 'http://localhost:51603/', //源地址
 	    changeOrigin: true, //改变源
 	    pathRewrite: {
 	      '^/server_85/ADMIN': '/user'
@@ -34,7 +44,7 @@ module.exports = {
 
 	  
       '/server_85/WEBSOCKET': {
-        target: 'http://localhost:9009/', //源地址
+        target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
           '^/server_85/WEBSOCKET': ''
@@ -44,7 +54,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8002, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

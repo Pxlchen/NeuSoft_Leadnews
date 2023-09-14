@@ -30,7 +30,7 @@ public class WmchannelController {
      * @param id
      * @return
      */
-    @GetMapping("/del/{id}")
+    @DeleteMapping("/del/{id}")
     public ResponseResult deleteById(@PathVariable Integer id){
         return channelService.deleteById(id);
     }
@@ -57,12 +57,12 @@ public class WmchannelController {
 
     /**
      * 修改频道
-     * @param wmChannel
+     * @param dto
      * @return
      */
     @PostMapping("/update")
-    public ResponseResult update(@RequestBody WmChannel wmChannel){
-        return channelService.updateChannel(wmChannel);
+    public ResponseResult update(@RequestBody ChannelSaveDto dto){
+        return channelService.updateChannel(dto);
     }
 
 }

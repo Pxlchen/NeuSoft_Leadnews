@@ -29,19 +29,19 @@
       <el-table-column
         label="正面照">
         <template slot-scope="scope">
-          <span><img class="article-img" :src="getImage(scope.row.font_image, 'back_image')"/></span>
+          <span><img class="article-img" :src="getImage(scope.row.fontImage)"/></span>
         </template>
       </el-table-column>
       <el-table-column
         label="背面照">
         <template slot-scope="scope">
-          <span><img class="article-img" :src="getImage(scope.row.back_image, 'back_image')"/></span>
+          <span><img class="article-img" :src="getImage(scope.row.backImage)"/></span>
         </template>
       </el-table-column>
       <el-table-column
         label="手持照">
         <template slot-scope="scope">
-          <span><img class="article-img" :src="getImage(scope.row.hold_image, 'hold_image')"/></span>
+          <span><img class="article-img" :src="getImage(scope.row.holdImage)"/></span>
         </template>
       </el-table-column>
       <el-table-column
@@ -53,7 +53,7 @@
       <el-table-column
         label="提交时间">
         <template slot-scope="scope">
-          <span><dd class="time">{{dateFormat(scope.row.submited_time)}}</dd></span>
+          <span><dd class="time">{{dateFormat(scope.row.submitedTime)}}</dd></span>
         </template>
       </el-table-column>
       <el-table-column label="操作"
@@ -101,9 +101,9 @@ export default {
     }
   },
   methods: {
-    getImage : function(item, key){
-      if(item[key]){
-        return this.host+item[key];
+    getImage : function(item){
+      if(item){
+        return item;
       }
       return avatar
     },

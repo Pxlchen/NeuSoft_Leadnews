@@ -88,24 +88,40 @@
           }
           this.$set(this.form,tmp.name,val)
         }
+		var index1 = this.table.indexOf( '_' );
+		var index2 = this.table.indexOf( '_', index1 + 1 );
+		var type = this.table.substring(0,index2)
+		if(type == "AD_CHANNEL"){
+			// alert(this.entry.id)
+			this.$set(this.form,"channelId",this.entry.id)
+		}else{
+			this.$set(this.form,"requestId",this.entry.id)
+		}
+		
       },
       submit : function(){
         this.$refs['commForm'].validate((valid) => {
           if (valid) {
             let sets = []
+			var data = '{'
             for(let k in this.form){
               if(this.form[k]){
                 // 排除时间的修改
                 if(this.model=='add'||(this.model=='edit'&&k.indexOf("_time")==-1)){
                   sets.push({filed:k,value:this.form[k]})
+				  data += '"'+k+'"'+':'+'"'+this.form[k]+'"'+','
                 }
               }
             }
+			data = data.substring(0,data.length-1)
+			// alert(data)
+			data+='}'
             let param = {
               model:this.model,
               name:this.table,
               where:[{filed:'id',type:'eq',value:this.entry.id}],
-              sets:sets
+              sets:sets,
+			  data:data
             }
             this.submitToBack(param)
           } else {
@@ -115,7 +131,7 @@
       },
       async submitToBack(param){
         let res = await updateData(param)
-        if(res.code==0){
+        if(res.code == 200){
           this.dialogFormVisible=false
           this.submitSuccess()
           this.$message({type:'success',message:this.getTitle()+'操作成功！'});

@@ -10,7 +10,7 @@ public class AdSensitiveDto {
     /**
      * 主键
      */
-    private Integer id;
+    private Integer requestId;
 
     /**
      * 敏感词
