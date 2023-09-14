@@ -1,6 +1,7 @@
 package com.neusoft.wemedia.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.neusoft.model.common.dtos.PageRequestDto;
 import com.neusoft.model.common.dtos.ResponseResult;
 import com.neusoft.model.wemedia.dtos.WmMaterialDto;
 import com.neusoft.model.wemedia.pojos.WmMaterial;
@@ -20,7 +21,7 @@ public interface WmMaterialService extends IService<WmMaterial> {
      * @param dto
      * @return
      */
-    public ResponseResult findList(WmMaterialDto dto);
+    public ResponseResult findList(PageRequestDto dto);
 
 
     /**

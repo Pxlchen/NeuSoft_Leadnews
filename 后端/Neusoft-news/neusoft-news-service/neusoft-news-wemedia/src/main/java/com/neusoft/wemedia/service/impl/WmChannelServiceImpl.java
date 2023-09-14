@@ -47,29 +47,39 @@ public class WmChannelServiceImpl extends ServiceImpl<WmChannelMapper, WmChannel
     /**
      * 修改频道
      *
-     * @param wmChannel
+     * @param dto
      * @return
      */
     @Override
-    public ResponseResult updateChannel(WmChannel wmChannel) {
+    public ResponseResult updateChannel(ChannelSaveDto dto) {
         //判断参数是否为空
-        if (wmChannel == null){
+        if (dto == null){
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
         }
         //判断频道是否存在
-        WmChannel channel = getById(wmChannel.getId());
+        WmChannel channel = getById(dto.getChannelId());
         if (channel == null){
             return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST);
         }
         //如果频道被引用则不能禁用
-        if (!wmChannel.getStatus()){
+        if (dto.getStatus() == null || !dto.getStatus().equals("1")){
             List<WmNews> wmNewsList = wmNewsService.list(Wrappers.<WmNews>lambdaQuery()
-                    .eq(WmNews::getChannelId, wmChannel.getId()));
+                    .eq(WmNews::getChannelId, dto.getChannelId()));
             if (wmNewsList.size() > 0){
                 return ResponseResult.errorResult(403,"该频道被引用，不能禁用");
             }
         }
         //修改频道
+        WmChannel wmChannel = new WmChannel();
+        BeanUtils.copyProperties(dto,wmChannel);
+        wmChannel.setId(dto.getChannelId());
+        if (dto.getIsDefault() == null)
+            dto.setIsDefault("0");
+        wmChannel.setIsDefault(dto.getIsDefault().equals("1"));
+        if (dto.getStatus() == null)
+            dto.setStatus("0");
+        wmChannel.setStatus(dto.getStatus().equals("1"));
+        if (dto.getOrd() != null) wmChannel.setOrd(Integer.valueOf(dto.getOrd()));
         updateById(wmChannel);
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
     }
@@ -98,10 +108,17 @@ public class WmChannelServiceImpl extends ServiceImpl<WmChannelMapper, WmChannel
         WmChannel wmChannel = new WmChannel();
         BeanUtils.copyProperties(dto,wmChannel);
         wmChannel.setCreatedTime(new Date());
-        wmChannel.setIsDefault(true);
+        if (dto.getIsDefault() == null)
+            dto.setIsDefault("0");
+        wmChannel.setIsDefault(dto.getIsDefault().equals("1"));
         if (wmChannel.getOrd() == null){
             wmChannel.setOrd(10);
+        }else {
+            wmChannel.setOrd(Integer.valueOf(dto.getOrd()));
         }
+        if (dto.getStatus() == null)
+            dto.setStatus("0");
+        wmChannel.setStatus(dto.getStatus().equals("1"));
 
         //新增频道
         save(wmChannel);

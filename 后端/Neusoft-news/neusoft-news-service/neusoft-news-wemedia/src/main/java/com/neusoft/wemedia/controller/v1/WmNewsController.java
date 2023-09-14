@@ -2,10 +2,7 @@ package com.neusoft.wemedia.controller.v1;
 
 
 import com.neusoft.model.common.dtos.ResponseResult;
-import com.neusoft.model.wemedia.dtos.NewsAuthDto;
-import com.neusoft.model.wemedia.dtos.WmNewsDto;
-import com.neusoft.model.wemedia.dtos.WmNewsEnableDto;
-import com.neusoft.model.wemedia.dtos.WmNewsPageReqDto;
+import com.neusoft.model.wemedia.dtos.*;
 import com.neusoft.wemedia.service.WmNewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -49,12 +46,12 @@ public class WmNewsController {
 
     /**
      * 文章删除
-     * @param id
+     * @param dto
      * @return
      */
-    @GetMapping("del_news/{id}")
-    public ResponseResult deleteNewsById(@PathVariable Integer id){
-        return wmNewsService.deleteNewsById(id);
+    @PostMapping("/del_news")
+    public ResponseResult deleteNewsById(@RequestBody NewsDto dto){
+        return wmNewsService.deleteNewsById(dto.getId());
     }
 
     /**

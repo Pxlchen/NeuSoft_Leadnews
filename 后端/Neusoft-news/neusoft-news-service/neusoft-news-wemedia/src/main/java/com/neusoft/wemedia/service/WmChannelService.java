@@ -39,8 +39,8 @@ public interface WmChannelService extends IService<WmChannel> {
 
     /**
      * 修改频道
-     * @param wmChannel
+     * @param dto
      * @return
      */
-    ResponseResult updateChannel(WmChannel wmChannel);
+    ResponseResult updateChannel(ChannelSaveDto dto);
 }
