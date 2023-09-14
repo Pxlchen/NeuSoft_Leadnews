@@ -86,6 +86,7 @@ public class ApUserSingInServiceImpl implements ApUserSingInService {
         //封装用户类，新增字段
         ApUser apUser = new ApUser();
         BeanUtils.copyProperties(dto, apUser);
+        apUser.setImage("https://chen-1317386995.cos.ap-guangzhou.myqcloud.com/Blog/imagesmykun.jpeg");
         apUser.setSalt(salt);
         apUser.setCreatedTime(new Date());
         apUserService.save(apUser);
