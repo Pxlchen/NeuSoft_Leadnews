@@ -22,7 +22,7 @@
               </template>
             </template>
           </el-table-column>
-          <el-table-column :label="item.label" v-else-if="item.name.indexOf('_time')>-1">
+          <el-table-column :label="item.label" v-else-if="item.name.indexOf('Time')>-1">
             <template slot-scope="scope">
               <span>{{ dateFormat(scope.row[item.name]) }}</span>
             </template>
@@ -66,7 +66,7 @@
 
 <script>
 import DateUtil from '@/utils/date'
-import {updateData} from '@/api/common'
+import {updateData2} from '@/api/common'
 const avatar = require('@/assets/avatar.jpg')
 export default {
   props: ['host','list','fileds','table','pageSize','total','changePage','changeStatus','editData','viewData'],
@@ -104,11 +104,11 @@ export default {
       this.id.value = id;
       let params = {
         name:this.table,
-        where:[this.id],
-        sets:[{filed:'status',value:status}]
+        id:id,
+        status:status
       }
-      let res = await updateData(params)
-      if(res.code==0){
+      let res = await updateData2(params)
+      if(res.code==200){
         this.changeStatus(index,status);
         this.$message({type:'success',message:'操作成功！'});
       }else{

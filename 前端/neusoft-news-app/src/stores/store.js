@@ -2,6 +2,8 @@ function Cache(){
     this.storage=null;
     this.tokenKey = "TOKEN_KEY"
     this.equipmentidKey = "EQUIPMENTID_KEY"
+    this.user="User"
+    this.showSidebar="sidebar"
 }
 Cache.prototype={
     setToken : function(token){
@@ -9,6 +11,18 @@ Cache.prototype={
     },
     getToken : function(){
         return this.__getItem(this.tokenKey);
+    },
+    setUserInfo:function (user){
+        return this.__setItem(this.user,user);
+    },
+    getUserInfo:function (){
+        return this.__getItem(this.user);
+    },
+    setShowSidebar:function (sidebar){
+        return this.__setItem(this.showSidebar,sidebar);
+    },
+    getShowSidebar:function (){
+        return this.__getItem(this.showSidebar);
     },
     setEquipmentId : function(equipmentId){
         return this.__setItem(this.equipmentidKey,equipmentId);
@@ -18,6 +32,9 @@ Cache.prototype={
     },
     clearToken : function(){
         return this.__removeItem(this.tokenKey);
+    },
+    clearUser : function(){
+        return this.__removeItem(this.user);
     },
     __check : function(){
         if(this.storage==null){
@@ -45,7 +62,7 @@ Cache.prototype={
                 if(e.result=='success'){
                     resolve(e.data)
                 }else{
-                    reject(e)
+                    resolve(null)
                 }
             });
         });

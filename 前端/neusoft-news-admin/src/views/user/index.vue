@@ -19,10 +19,10 @@
            <div v-if="editUser" class="clause edituser">
              <el-form>
                <el-form-item label-width="120px" label="名称">
-                  <el-input style='width:30%' placeholder="请输入头条号名称" v-model="userData.name"></el-input>
+                  <el-input style='width:30%' placeholder="请输入资讯号名称" v-model="userData.name"></el-input>
                </el-form-item>
                 <el-form-item  label-width="120px" label="简介">
-                  <el-input  style='width:30%'  placeholder="请输入头条号简介" v-model="userData.intro"></el-input>
+                  <el-input  style='width:30%'  placeholder="请输入资讯号简介" v-model="userData.intro"></el-input>
                </el-form-item>
              </el-form>  
             <div class="btn-group">
@@ -35,10 +35,10 @@
         <label>账号信息</label>
         <div class="rightContent">
           <div class="clause">
-            <span>头条号类型</span>个人
+            <span>资讯号类型</span>个人
           </div>
           <div class="clause">
-            <span>头条号ID</span>{{user.id}}
+            <span>资讯号ID</span>{{user.id}}
           </div>
         </div>
       </div>

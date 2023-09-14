@@ -53,7 +53,7 @@
         <Process :value="data.userRegister" :yes-value="data.userRegisterByYes"/>
       </div>
       <div class="center">
-        <div class="ctitle">黑马可视化大屏</div>
+        <div class="ctitle">东软资讯可视化大屏</div>
         <BTitle text="全球累计注册用户数"/>
         <HCore :width="screenWidth" :value="data.allUser"/>
         <BTitle text="今日平台访问数据"  style="margin-top: 15px"/>
@@ -257,7 +257,7 @@
           }
         },
         mounted() {
-          document.title='欢迎进入黑马可视化大屏'
+          document.title='欢迎进入东软资讯可视化大屏'
           document.querySelector('body').setAttribute('style', 'background-color:#090f1d')
           this.connect.timer=setInterval(this.connectFun,3000)
         },

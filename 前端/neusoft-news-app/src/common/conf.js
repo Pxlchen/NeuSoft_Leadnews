@@ -2,12 +2,13 @@ const  config = {
     // 注册对应服务名称
     services:{
         article:'ARTICLE',
+		search:'SEARCH',
         behavior:'BEHAVIOR',
         user:'USER',
         login:'LOGIN'
     },
     // 请求本地的请求service
-    local:{user:true,article:true,behavior:true,login:true},
+    local:{user:true,search:true,article:true,behavior:true,login:true},
     // 代理前缀
     prefix:{
         server_85:'/server_85'
@@ -18,12 +19,12 @@ const  config = {
         loadnew:{url:'api/v1/article/loadnew/',sv:'article'},
         load_article_info:{url:'api/v1/article/load_article_info/',sv:'article'},
         load_article_behavior:{url:'api/v1/article/load_article_behavior/',sv:'article'},
-        load_search_history:{url:'api/v1/article/search/load_search_history/',sv:'article'},
-        del_search:{url:'api/v1/article/search/del_search/',sv:'article'},
+        load_search_history:{url:'search/api/v1/history/load/',sv:'search'},
+        del_search:{url:'search/api/v1/history/del/',sv:'search'},
         clear_search:{url:'api/v1/article/search/clear_search/',sv:'article'},
-        associate_search:{url:'api/v1/article/search/associate_search/',sv:'article'},
+        associate_search:{url:'search/api/v1/associate/search/',sv:'search'},
         load_hot_keywords:{url:'api/v1/article/search/load_hot_keywords/',sv:'article'},
-        article_search:{url:'api/v1/article/search/article_search/',sv:'article'},
+        article_search:{url:'search/api/v1/article/search/search/',sv:'search'},
         // ==========  behavior
         show_behavior:{url:'api/v1/behavior/show_behavior/',sv:'behavior'},
         read_behavior:{url:'api/v1/behavior/read_behavior/',sv:'behavior'},
@@ -34,6 +35,7 @@ const  config = {
         collection_behavior:{url:'api/v1/behavior/collection_behavior/',sv:'behavior'},
         // ==========  user
         user_follow:{url:'api/v1/user/user_follow/',sv:'user'},
+        user_information:{url:'api/v1/user/information/',sv:'user'},
         // ==========  login
         user_login:{url:'api/v1/login/login_auth/',sv:'login'},
         // 解决多访问地址的问题

@@ -43,6 +43,8 @@
   const modal = weex.requireModule("modal")
 
   export default {
+
+
     name: 'HeiMa-Home',
     components: {Home_Bar,WxcTabPage, Item0,Item1,Item3,WxcPanItem},
     data: () => ({
@@ -72,7 +74,11 @@
     mounted(){
       // 激活推荐按钮
       this.$refs['wxc-tab-page'].setPage(1,null,true);
-    },
+
+      console.log()
+
+
+      },
     destroyed(){
       clearInterval(this.timer)
     },
@@ -140,11 +146,12 @@
             id:data[i].id,
             title:data[i].title,
             comment:data[i].comment,
-            authorId:data[i].author_id,
-            source:data[i].author_name,
-            date:data[i].publish_time,
+            authorId:data[i].authorId,
+            source:data[i].authorName,
+            date:data[i].publishTime,
             type:ims.length==2?1:ims.length,
             image:ims,
+			staticUrl:data[i].staticUrl,
             icon:'\uf06d'
           }
           let time = data[i].publish_time;
@@ -185,7 +192,7 @@
       },
       // 列表项点击事件
       wxcPanItemClicked(item){
-
+		// alert(item);
         this.$router.push({
           name:'article-info',
           params:item

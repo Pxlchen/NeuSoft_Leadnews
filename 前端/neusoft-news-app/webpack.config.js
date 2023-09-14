@@ -1,7 +1,25 @@
 // You can see all the config in `./configs`.
-const  buildPlugins = require('./configs/plugin');
+const buildPlugins = require('./configs/plugin');
 let webpackConfig;
+
 module.exports = env => {
+  webpackConfig = {
+    module: {
+      rules: [
+        // 处理CSS文件
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
+      ],
+    },
+    resolve: {
+      alias: {
+        'animate.css': 'animate.css/animate.css',
+      },
+    },
+  };
+
   switch (env.NODE_ENV) {
     case 'prod':
     case 'production':
@@ -13,6 +31,7 @@ module.exports = env => {
       break;
     case 'plugin':
       buildPlugins();
+      break;
     case 'common':
       webpackConfig = require('./configs/webpack.common.conf');
       break;
@@ -24,5 +43,6 @@ module.exports = env => {
     default:
       webpackConfig = require('./configs/webpack.dev.conf');
   }
+
   return webpackConfig;
-}
+};

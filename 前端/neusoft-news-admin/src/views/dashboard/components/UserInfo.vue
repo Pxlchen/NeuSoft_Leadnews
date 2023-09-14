@@ -4,7 +4,7 @@
       <el-col :span="15">
         <dl class="user-info">
           <dd class="user-avatar"><img src="@/assets/avatar.jpg"></dd>
-          <dt>黑马头条官方账号</dt>
+          <dt>东软资讯官方账号</dt>
           <dd class="tips">视频发布</dd>
         </dl>
       </el-col>

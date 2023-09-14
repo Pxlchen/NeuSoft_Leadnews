@@ -39,15 +39,19 @@
       <el-table-column
         label="创建时间">
         <template slot-scope="scope">
-          <span>{{ dateFormat(scope.row.created_time) }}</span>
+          <span>{{ dateFormat(scope.row.createdTime) }}</span>
         </template>
       </el-table-column>
       <el-table-column label="操作"
-         width="200" >
+         width="300" id="operate">
         <template slot-scope="scope">
           <el-button
             size="mini"
             @click="operateForEditor(scope.row)">编辑</el-button>
+		  <el-button
+			  size="mini"
+			  type="danger"
+			  @click="operateForDelete(scope.row.id)">删除</el-button>
           <el-button
             size="mini"
             type="danger"
@@ -74,10 +78,10 @@
 
 <script>
 import DateUtil from '@/utils/date'
-import {updateData} from '@/api/common'
+import {updateData,updateData2,deleteData} from '@/api/common'
 const avatar = require('@/assets/avatar.jpg')
 export default {
-  props: ['host','list','table','pageSize','total','changePage','changeStatus','editData'],
+  props: ['host','list','table','pageSize','total','changePage','changeStatus','editData','deleteData'],
   data() {
     return {
        listPage:{
@@ -115,11 +119,11 @@ export default {
       this.id.value = id;
       let params = {
         name:this.table,
-        where:[this.id],
-        sets:[{filed:'status',value:status}]
+        channelId:id,
+        status:status+''
       }
-      let res = await updateData(params)
-      if(res.code==0){
+      let res = await updateData2(params)
+      if(res.code==200){
         this.changeStatus(index,status);
         this.$message({type:'success',message:'操作成功！'});
       }else{
@@ -127,8 +131,34 @@ export default {
       }
     },
     operateForEditor(item) {
+		// alert(item.id)
       this.editData(item)
     },
+	operateForDelete(id) {
+	  this.$confirm('确定要删除吗？', '提示', {
+	    confirmButtonText: '确定',
+	    cancelButtonText: '取消',
+	  }).then(({ value }) => {
+	    this.doDelete(id)
+	  }).catch(() => {
+	
+	  });
+	},
+	async doDelete(id) {
+	      this.id.value = id;
+	      let params = {
+	        name:this.table,
+			    id:id,
+	        where:[this.id]
+	      }
+	      let res = await deleteData(params)
+	      if(res.code==200){
+	        this.deleteData(id);
+	        this.$message({type:'success',message:'操作成功！'});
+	      }else{
+	        this.$message({type:'error',message:res.errorMessage});
+	      }
+	    },
     open(msg) {
       this.$prompt(msg, '提示', {
         confirmButtonText: '确定',
@@ -163,6 +193,9 @@ export default {
       padding: 15px 5px;
       margin: 0 10px;
       border-bottom: 1px solid #f2f3f5;
+	  .operate{
+		  width: 500px;
+	  }
        .draft {
            color:#FDC2A9;
            border-color: #FDC2A9;

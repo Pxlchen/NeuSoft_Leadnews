@@ -12,15 +12,39 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/server_85/ADMIN': {
-        target: 'http://localhost:9007/', //源地址
+		'/server_85/admin/user': {
+		  target: 'http://localhost:51603/', //源地址
+		  changeOrigin: true, //改变源
+		  pathRewrite: {
+		    '^/server_85/admin': ''
+		  }
+		},
+		'/server_85/admin/wemedia': {
+		  target: 'http://localhost:51603/', //源地址
+		  changeOrigin: true, //改变源
+		  pathRewrite: {
+		    '^/server_85/admin': ''
+		  }
+		},
+      '/server_85/admin': {
+        target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
-          '^/server_85/ADMIN': ''
+          '^/server_85': ''
         }
       },
+	  
+	  '/server_85/ADMIN/api/v1/admin/auth/list': {
+	    target: 'http://localhost:51603/', //源地址
+	    changeOrigin: true, //改变源
+	    pathRewrite: {
+	      '^/server_85/ADMIN': '/user'
+	    }
+	  },
+
+	  
       '/server_85/WEBSOCKET': {
-        target: 'http://localhost:9009/', //源地址
+        target: 'http://localhost:51603/', //源地址
         changeOrigin: true, //改变源
         pathRewrite: {
           '^/server_85/WEBSOCKET': ''

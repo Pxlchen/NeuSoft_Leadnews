@@ -36,8 +36,7 @@
     .bar_bg{
         width: @screen-width;
         flex-direction: row;
-        background-color: @mian-color;
-        border-style: solid;
+        background-color: #d7eafc;
         height: @top-height;
         padding: 7px 15px 10px;
         align-items: center;

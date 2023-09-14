@@ -9,6 +9,7 @@
       :total="total"
       :table="this.params.name"
       :editData="editData"
+	  :deleteData="deleteData"
       :changePage="changePage"
       :changeStatus="changeStatus"
       :pageSize="params.size"/>
@@ -26,7 +27,7 @@
     data() {
       return {
         params:{
-          name:'AD_CHANNEL',
+          name:'AD_CHANNEL_',
           page:1,
           size:10,
           where:[]
@@ -40,10 +41,10 @@
               { min: 2, max:4,message: '频道名称在2~4个字符', trigger: 'blur' }
             ]},
           {label:'频道描述',name:'description',type:'input',placeholder:'请输入描述信息'},
-          {label:'默认频道',name:'is_default',type:'radio',value:0,radios:[{value:0,label:'否'},{value:1,label:'是'}]},
+          {label:'默认频道',name:'isDefault',type:'radio',value:0,radios:[{value:0,label:'否'},{value:1,label:'是'}]},
           {label:'是否有效',name:'status',type:'radio',value:1,radios:[{value:0,label:'否'},{value:1,label:'是'}]},
           {label:'排序',name:'ord',type:'number',value:0},
-          {label:'创建时间',name:'created_time',type:'hidden',value:DateUtil.format13HH(new Date().getTime())}
+          {label:'创建时间',name:'createdTime',type:'hidden',value:DateUtil.format13HH(new Date().getTime())}
         ]
       }
     },
@@ -64,12 +65,17 @@
       submitSuccess:function(){
         this.loadData()
       },
+	  // 删除数据
+	  deleteData:function(id){
+		this.loadData()
+	  },
       changeStatus:function(index,status){
         this.$set(this.list[index],'status',status)
       },
       changeParam :function(e){
         this.params.page=1
-        this.params.where[0]=e
+        this.params.name += e.value
+		// alert(this.params.name)
         this.loadData()
       },
       changePage :function(e){
@@ -78,10 +84,10 @@
       },
       async loadData() {
         let res = await loadList({...this.params});
-        if (res.code == 0) {
-          this.list = res.data.list
+        if (res.code == 200) {
+          this.list = res.data
           this.host = res.host
-          this.total = res.data.total //总记录数
+          this.total = res.total //总记录数
         } else {
           this.$message({type: 'error', message: res.error_message})
         }
