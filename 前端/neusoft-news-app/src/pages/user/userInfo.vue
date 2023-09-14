@@ -9,11 +9,11 @@
                width="620"
     >
 
-      <div class="siderbarBox-top">
-        <div class="saoMa">
-          <image class="saoMa-image" src="/static/images/erweima2.png" mode=""></image>
+        <div class="siderbarBox-top">
+          <div class="saoMa">
+            <image class="saoMa-image" src="/static/images/erweima2.png" mode=""></image>
+          </div>
         </div>
-      </div>
 
 
       <!-- 头像区域 -->
@@ -33,7 +33,7 @@
 
       <div class="vip">
         <div class="vip-text-a">
-          <h2>超级VIP</h2>
+          <h2>个人等级</h2>
           <div class="dengjitiao">
             <div class="now"/>
           </div>
@@ -62,25 +62,31 @@
 
       </div>
 
-      <div class="again-login" @click="">
+      <div class="again-login" @click="exit()">
         <h2 class="again-login-h2">退出登录/关闭</h2>
       </div>
 
     </wxc-popup>
 
 
-    <div class="top">
-      <div class="top-left" @click="openBottomPopup">
-        <image class="top-left-image" src="/static/images/morec.png"></image>
+
+      <div class="top">
+        <transition name="slideFade">
+
+            <div class="top-left" @click="openBottomPopup" v-if="a">
+              <image class="top-left-image" src="/static/images/morec.png"></image>
+            </div>
+        </transition>
+        <div class="top-right">
+          <image class="top-right-image" src="/static/images/search-user.png" mode=""></image>
+        </div>
+
       </div>
-      <div class="top-right">
-        <image class="top-right-image" src="/static/images/search-user.png" mode=""></image>
-      </div>
-    </div>
+
 
     <!-- 头像区域 -->
     <div class="information">
-      <div class="avatr">
+      <div class="avatr" @click="aa">
         <image class="avatr-image" src="/static/images/load_screen.png" mode=""></image>
       </div>
       <div class="person-information">
@@ -118,12 +124,16 @@
 <script>
 import wave from "../../compoents/user/wave.vue"
 import { WxcPopup } from 'weex-ui';
+
+
+
 export default {
 
   data() {
     return {
       isBottomShow: false,
       height: 400,
+      a:true,
       menu:[
         {
           image:'/static/images/a.png',
@@ -202,23 +212,14 @@ export default {
       ]
     }
   },
+
+
   components:{wave,WxcPopup },
 
-
-
-
-
-
-
-
-  name: "load_screen",
-  created() {
-    let _this = this
-    setTimeout(function(){
-      _this.goLogin()
-    },100000)
-  },
   methods : {
+    aa(){
+      this.a=!this.a;
+    },
 
     openBottomPopup () {
       this.isBottomShow = true;
@@ -229,6 +230,12 @@ export default {
     },
     late(time){
       return `--tm:${time * 0.05}s`
+    },
+
+    //退出
+    exit(){
+      this.$store.clearToken()
+      this.$router.push('/login');
     }
 
   }
@@ -257,7 +264,7 @@ export default {
 .menu-i{
   position: relative;
   width: 98%;
-  height: 682px;
+  height: 500px;
   background-color: white;
   margin-top: 22px;
   margin-left: 1%;
@@ -266,6 +273,7 @@ export default {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  overflow-y: auto;
 }
 .menu-item{
   position: relative;

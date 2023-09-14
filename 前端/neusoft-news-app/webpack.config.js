@@ -9,9 +9,14 @@ module.exports = env => {
         // 处理CSS文件
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader', 'postcss-loader'],
+          use: ['style-loader', 'css-loader'],
         },
       ],
+    },
+    resolve: {
+      alias: {
+        'animate.css': 'animate.css/animate.css',
+      },
     },
   };
 

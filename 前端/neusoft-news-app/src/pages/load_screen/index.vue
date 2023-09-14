@@ -1,4 +1,3 @@
-
 <template>
   <div class="wapper" ref="bg">
     <image class="img" src="/static/images/load_screen.png"/>

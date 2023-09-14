@@ -7,6 +7,8 @@ import Login from '@/pages/login/index'
 import Screen from '@/pages/load_screen/index'
 import SearchResult from '@/pages/search_result/index'
 import UserInfo from "@/pages/user/userInfo.vue";
+import LoginC from "@/compoents/login/loginC.vue";
+import Register from "@/compoents/login/register.vue";
 
 let routes = [
     {
@@ -35,7 +37,21 @@ let routes = [
 	{
         path:'/login',
         name: 'login',
-        component:Login
+        component:Login,
+        redirect:'/login/user',
+        children: [
+            {
+                path:'/login/user',
+                name:'LoginC',
+                component: LoginC
+            },
+            {
+                path:'/login/register',
+                name:'Register',
+                component: Register
+
+            }
+        ]
     },
 	{
         path:'/article',

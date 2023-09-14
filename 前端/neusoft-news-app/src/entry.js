@@ -6,6 +6,7 @@ import store from '@/stores/store'
 import date from '@/utils/date'
 
 
+
 Vue.prototype.$date = date
 Vue.prototype.$lang = lang
 Vue.prototype.$config = conf

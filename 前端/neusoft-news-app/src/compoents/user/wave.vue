@@ -25,7 +25,7 @@
 		position: absolute;
 		width: 100%;
 		height: 10%;
-		bottom: 100px;
+		bottom: 122px;
 		z-index: 2;
 	}
 	.waves{
