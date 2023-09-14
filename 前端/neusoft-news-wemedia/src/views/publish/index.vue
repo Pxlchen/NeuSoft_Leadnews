@@ -151,6 +151,13 @@
         activeName2: "all",
         selected_img_url: require("@/assets/selected.png"),
         upload_img_url: require("@/assets/pic_bg.png"),
+		
+		
+		dialogImageUrl: '',
+		dialogVisible: false,
+		disabled: false,
+		
+		
         imgPage: {
           /***用来存储页面的页码及行数信息*****/
           total: 0, //总页数
@@ -180,7 +187,7 @@
           if(item.indexOf('http')>-1){
             return item;
           }else{
-            return this.host+item;
+            return item;
           }
         }else{
           return this.upload_img_url
@@ -280,9 +287,9 @@
         let result = await getAllImgData({
           size: this.imgPage.pageSize,
           page: temp,
-          is_collected: isCollect?1:0 //是否是收藏
+          isCollection: isCollect?1:0 //是否是收藏
         });
-        this.imgData = result.data.list;
+        this.imgData = result.data;
         this.imgPage.total = result.data.total;
         this.imgPage.pageCount = Math.ceil(
           this.imgPage.total / this.imgPage.pageSize
@@ -360,6 +367,16 @@
           message: articleId ? "编辑文章成功" : "新增文章成功"
         });
         this.$router.replace({ path: "/article/list" });
+      },
+	  handleRemove(file) {
+        console.log(file);
+      },
+      handlePictureCardPreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
+      },
+      handleDownload(file) {
+        console.log(file);
       }
     }
   };

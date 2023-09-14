@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <hamburger :toggle-click="toggleSideBar" class="hamburger-container"/>
-    <span class="company-container">xxxxxxxx科技股份有限公司</span>
+    <span class="company-container">东软在线资讯</span>
     <div class="right-menu">
       <el-tooltip content="搜索" effect="dark" placement="bottom">
        <el-input v-model="searchText" type="text" @keyup.enter.native="searchInfo" size="small" style='width:180px;margin-right:20px' placeholder="请输入搜索的文章内容"  prefix-icon="el-icon-search"  >

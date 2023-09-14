@@ -8,10 +8,10 @@
           </el-radio-group>
           <el-button @click="showPicDialog = true" class="upload_btn" type="primary">上传图片</el-button>
           <div class="img_list">
-              <div class="img_list_item" v-for="img in imgData" :key="img.id">
+              <div class="img_list_item" v-for="(img,index,) in imgData" :key="img.id">
                   <img :src="img.url" />
                   <div v-if="activeSelect == '0'" class="operate">
-                     <img @click="collectOrCancel(img)" :src="img.is_collection ? collectSelectedIcon : collectIcon" alt="" />
+                     <img @click="collectOrCancel(index,img),listNew(index,img)" :src="img.isCollection ? collectSelectedIcon : collectIcon" alt="" />
                      <img @click="delImg(img)" :src="delIcon" alt="">
                   </div>
               </div>
@@ -71,13 +71,15 @@ export default {
     mounted () {
         this.loadData();
     },
+
     methods:{
       loadData : function(){
+		//this.activeSelect=value
         //初始化时加载数据
         this.getImgData({
           page:this.imgPage.currentPage,
           size:this.imgPage.pageSize,
-          is_collected:this.activeSelect
+          isCollection:this.activeSelect
         })
       },
       //页面发生变化
@@ -86,18 +88,31 @@ export default {
         this.loadData();
       },
       //获取图片素材
-      async  getImgData (params) {
+		async getImgData (params) {
+		  
         let result = await getAllImgData(params)
-        this.imgData = result.data.list
+        this.imgData = result.data
         this.imgPage.total = result.data.total
         this.imgPage.pageCount = Math.ceil(this.imgPage.total / this.imgPage.pageSize)
+		console.log(this.imgData)
       },
+	  listNew(index,img){
+		  console.log(img)
+		  let isCollected = img.is_collection;
+		  if(isCollected==1){ isCollected = 0; }else{ isCollected=1; }
+		  let newData=JSON.stringify(this.imgData[index].is_collection)
+		  //console.log("old====================="+JSON.stringify(this.imgData[index]))
+		  this.imgData[index].isCollection=isCollected
+		  //console.log("new=============="+JSON.stringify(this.imgData[index]))
+	  },
       //取消或者收藏图片
-      async collectOrCancel (img) {
+      async collectOrCancel (index,img) {
           let isCollected = img.is_collection;
           if(isCollected==1){ isCollected = 0; }else{ isCollected=1; }
+		
           //取相反状态
          await collectOrCancel(img.id , {isCollected:isCollected})
+		 
          img.is_collection = isCollected //取相反状态
          this.$forceUpdate() //强制更新
          this.$message({type:'success',message:'操作成功'})

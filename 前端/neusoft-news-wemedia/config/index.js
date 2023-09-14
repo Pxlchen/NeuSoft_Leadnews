@@ -13,10 +13,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/wemedia': {
-        target: 'http://localhost:9006/', //源地址
-        changeOrigin: true, //改变源
+        target: 'http://localhost:51602/', //源地址
+        changeOrigin: true, //改变源    //为跨域
         pathRewrite: {
-          '^/wemedia/MEDIA': ''
+          '^/wemedia/MEDIA': '/wemedia'
         }
       }
     },

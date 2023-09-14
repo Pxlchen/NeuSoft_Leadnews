@@ -7,10 +7,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PageRequestDto {
 
-    //页码大小
-    protected Integer size;
+
+    private short isCollection;
     //页码
-    protected Integer page;
+    private Integer page;
+    //页码大小
+    private Integer size;
+
 
     public void checkParam() {
         if (this.page == null || this.page < 0) {

@@ -4,21 +4,38 @@ import {API_USERIMAGES_LIST,API_USERIMAGES_ADD ,
   API_MODIFYIMAGE_COL_CANCEL,API_MODIFYIMAGE_DELETE} from '@/constants/api'
 //拉取全部的素材图片
 export function getAllImgData (data) {
+	
     return Request({
         url:API_USERIMAGES_LIST,
         method:'post',
         params:{},
         data:data
     })
+	
 }
+
 //上传图片
 export function  uploadImg (data) {
+    console.log(data);
     return Request({
         url:API_USERIMAGES_ADD,
         method:'post',
         data
     })
 }
+
+
+// export function uploadImg(data) {
+//     const formData = new FormData();
+//     formData.append('multipartFile', data);
+  
+//     return Request({
+//       url: API_USERIMAGES_ADD,
+//       method: 'post',
+//       data: formData
+//     });
+//   }
+  
 //拉取文章
 export function getChannels () {
     return Request({
@@ -51,7 +68,7 @@ export function delImg (id) {
        url:API_MODIFYIMAGE_DELETE,
        method:'post',
        params:{},
-       data:{id:id}
+       data:{collectId:id}
    })
 }
 //收藏或取消收藏方法
@@ -59,13 +76,15 @@ export function  collectOrCancel (id,data) {
     let collect = data.isCollected
   console.log(collect)
     let url = API_MODIFYIMAGE_COL
+	console.log(url)
     if(collect==0){
       url = API_MODIFYIMAGE_COL_CANCEL
+	  console.log(url)
     }
     return Request({
         url:url,
         method:'post',
         params:{},
-        data:{id:id}
+        data:{collectId:id}
     })
 }

@@ -1,9 +1,12 @@
 package com.neusoft.wemedia.controller.v1;
 
 import com.neusoft.common.constants.WemediaConstants;
+import com.neusoft.model.common.dtos.PageRequestDto;
 import com.neusoft.model.common.dtos.ResponseResult;
 import com.neusoft.model.wemedia.dtos.WmMaterialDto;
+import com.neusoft.model.wemedia.dtos.collectDto;
 import com.neusoft.wemedia.service.WmMaterialService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +24,7 @@ public class WmMaterialController {
      * @return
      */
     @PostMapping("/upload_picture")
-    public ResponseResult uploadPicture(MultipartFile multipartFile){
+    public ResponseResult uploadPicture(@RequestParam("file") MultipartFile multipartFile){
         return wmMaterialService.uploadPicture(multipartFile);
     }
 
@@ -31,37 +34,38 @@ public class WmMaterialController {
      * @return
      */
     @PostMapping("/list")
-    public ResponseResult findList(@RequestBody WmMaterialDto dto){
+    public ResponseResult findList(@RequestBody PageRequestDto dto){
         return wmMaterialService.findList(dto);
     }
 
     /**
      * 图片删除
-     * @param id
+     * @param dto
      * @return
      */
-    @GetMapping("/del_picture/{id}")
-    public ResponseResult deletePicture(@PathVariable Integer id){
-        return wmMaterialService.deletePicture(id);
+    @PostMapping("/del_picture")
+    public ResponseResult deletePicture(@RequestBody collectDto dto){
+        return wmMaterialService.deletePicture(dto.getCollectId());
     }
 
     /**
      * 取消收藏素材
-     * @param id
+     * @param dto
      * @return
      */
-    @GetMapping("/cancel_collect/{id}")
-    public ResponseResult cancelCollect(@PathVariable Integer id){
-        return wmMaterialService.updateCollect(id, WemediaConstants.CANCEL_COLLECT_MATERIAL);
+    @PostMapping("/cancel_collect")
+    public ResponseResult cancelCollect(@RequestBody collectDto dto){
+        return wmMaterialService.updateCollect(dto.getCollectId(), WemediaConstants.CANCEL_COLLECT_MATERIAL);
     }
+
 
     /**
      * 收藏素材
-     * @param id
+     * @param dto
      * @return
      */
-    @GetMapping("/collect/{id}")
-    public ResponseResult materialCollect(@PathVariable Integer id){
-        return wmMaterialService.updateCollect(id, WemediaConstants.COLLECT_MATERIAL);
+    @PostMapping("/collect")
+    public ResponseResult materialCollect(@RequestBody collectDto dto){
+        return wmMaterialService.updateCollect(dto.getCollectId(), WemediaConstants.COLLECT_MATERIAL);
     }
 }

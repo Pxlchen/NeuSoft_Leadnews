@@ -21,18 +21,22 @@ export default {
   data () {
       return  {
          upload_img_url:require('@/assets/pic_bg.png'),
+		 	resultUrl:''
       }
+
   },
   methods:{
       //上传图片
-     async fnUpload () {
+      fnUpload () {
         let files = document.querySelector('.el-upload .el-upload__input').files ;
         if(files && files.length) {
           let fd = new FormData();
-          fd.append('file', files[0],files[0].name);
-          let result = await uploadImg(fd)
-          this.$message({message:'上传成功',type:'success'}) && (this.upload_img_url = result.data.url)
-          debugger;
+          fd.append('file', files[0]);
+          let result =  uploadImg(fd)
+		  console.log("result")
+		  console.log(result)
+          //this.$message({message:'上传成功',type:'success'}) && (this.upload_img+_url = result.data.url)
+          //debugger;
           this.imgChange && this.imgChange(result.url) //调用上层的方法 通知数据变化
         }else{
            this.$message({message:"请选择一张图片",type:"warning"})

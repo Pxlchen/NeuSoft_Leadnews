@@ -64,7 +64,7 @@ export default {
       if(item.images){
         let temp = item.images.split(",")
         if(temp.length>0){
-          return this.host+temp[0];
+          return temp[0];
         }
       }
       return avatar
