@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.neusoft.common.exception.CustomException;
 import com.neusoft.file.service.FileStorageService;
+import com.neusoft.model.common.dtos.PageRequestDto;
 import com.neusoft.model.common.dtos.PageResponseResult;
 import com.neusoft.model.common.dtos.ResponseResult;
 import com.neusoft.model.common.enums.AppHttpCodeEnum;
@@ -92,7 +93,7 @@ public class WmMaterialServiceImpl extends ServiceImpl<WmMaterialMapper, WmMater
      * @return
      */
     @Override
-    public ResponseResult findList(WmMaterialDto dto) {
+    public ResponseResult findList(PageRequestDto dto) {
         //1.检查参数
         dto.checkParam();
 
@@ -101,8 +102,8 @@ public class WmMaterialServiceImpl extends ServiceImpl<WmMaterialMapper, WmMater
         LambdaQueryWrapper<WmMaterial> lambdaQueryWrapper = new LambdaQueryWrapper<>();
 
         //是否收藏
-        if (dto.getIsCollection() != null && dto.getIsCollection() == 1){
-            lambdaQueryWrapper.eq(WmMaterial::getIsCollection,dto.getIsCollection());
+        if (dto.getIsCollection() == 1){
+            lambdaQueryWrapper.eq(WmMaterial::getIsCollection, dto.getIsCollection());
         }
 
         //按照用户查询
