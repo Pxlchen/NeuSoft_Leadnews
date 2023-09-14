@@ -4,6 +4,9 @@ let webpackConfig;
 
 module.exports = env => {
   webpackConfig = {
+    optimization: {
+      minimize: false, // 禁用压缩
+    },
     module: {
       rules: [
         // 处理CSS文件
@@ -11,6 +14,27 @@ module.exports = env => {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
         },
+        // 处理图片文件
+        {
+          test: /\.(png|jpg|jpeg|gif|svg)$/,
+          use: [
+            {
+              loader: 'file-loader', // 或者使用 'url-loader'
+              options: {
+                outputPath: 'images', // 输出文件夹
+              },
+            },
+          ],
+        },
+        {
+          test: /\.js$/,
+          use: [{
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+          }]
+        }
       ],
     },
     resolve: {
