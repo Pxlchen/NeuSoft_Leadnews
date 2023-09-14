@@ -15,7 +15,7 @@ function doGet(url, params) {
     });
 }
 
-/*传递json数据，在请求报文中是json格式*/
+/*传递json数据*/
 function doPostJson(url, params) {
     return axios({
         url: url,
@@ -34,18 +34,20 @@ function doPost(url, params) {
 //创建请求拦截器
 axios.interceptors.request.use(function (config) {
 
-    //在需要用户登录后的操作，在请求的url中加入token
+    //登录后的操作，在请求的url中加入token
 
     let token;
-    store.getToken().then(resp =>{
-        console.log(resp)
-        console.log("url====="+config.url);
-        token = resp;
-        if (config.url == '/api/v1/user/information') {
+    if (config.url == '/api/v1/user/information') {
+        store.getToken().then(resp => {
+            console.log(resp)
+            console.log("url=====" + config.url);
+            token = resp;
+
             config.headers['token'] = token;
-        }
-        return config;
-    });
+
+        });
+    }
+    return config;
 }, function (err) {
     console.log("请求错误" + err)
 })

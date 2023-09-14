@@ -43,6 +43,8 @@
   const modal = weex.requireModule("modal")
 
   export default {
+
+
     name: 'HeiMa-Home',
     components: {Home_Bar,WxcTabPage, Item0,Item1,Item3,WxcPanItem},
     data: () => ({
@@ -72,7 +74,11 @@
     mounted(){
       // 激活推荐按钮
       this.$refs['wxc-tab-page'].setPage(1,null,true);
-    },
+
+      console.log()
+
+
+      },
     destroyed(){
       clearInterval(this.timer)
     },

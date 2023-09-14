@@ -39,9 +39,7 @@
         width: @screen-width;
         flex-direction: row;
         align-items:center;
-        border-width:1px;
-        border-color: @border-color;
-        background-color: @bg-white;
+
         border-style: solid;
         height: @top-height;
         padding-top: 4px;

@@ -13,7 +13,7 @@
     "clean:web": "rimraf ./release/web",
     "clean:ios": "rimraf ./release/ios",
     "clean:android": "rimraf ./release/android",
-    "dev": "webpack --env.NODE_ENV=common --progress --watch",
+    "dev": "webpack --disableHostCheck=true --env.NODE_ENV=common --progress --watch",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "serve": "webpack-dev-server --env.NODE_ENV=development --progress",

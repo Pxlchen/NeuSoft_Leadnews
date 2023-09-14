@@ -15,18 +15,17 @@
           </div>
         </div>
 
-
       <!-- 头像区域 -->
       <div class="information">
         <div class="avatr">
-          <image class="avatr-image" src="/static/images/load_screen.png" mode=""></image>
+          <image class="avatr-image" :src="user.image" mode=""></image>
         </div>
         <div class="person-information">
-          <div class="person-information-a" @click="">
-            <h2>this.User.uname</h2>
+          <div class="person-information-a" @click="toLogin()">
+            <h2 class="person-information-a-h2" >{{ user.name }}</h2>
           </div>
           <div class="person-information-b">
-            <p>xx关注&nbsp&nbspxx粉丝&nbsp&nbspLv.7</p>
+            <p>0关注&nbsp&nbsp0赞&nbsp&nbspLv.1</p>
           </div>
         </div>
       </div>
@@ -87,14 +86,14 @@
     <!-- 头像区域 -->
     <div class="information">
       <div class="avatr" @click="aa">
-        <image class="avatr-image" src="/static/images/load_screen.png" mode=""></image>
+        <image class="avatr-image" :src="user.image" mode=""></image>
       </div>
       <div class="person-information">
-        <div class="person-information-a" @click="">
-          <h2 class="person-information-a-h2">this.User.uname</h2>
+        <div class="person-information-a" @click="toLogin()">
+          <h2 class="person-information-a-h2">{{ user.name }}</h2>
         </div>
         <div class="person-information-b">
-          <p>xx关注&nbsp&nbspxx粉丝&nbsp&nbspLv.7</p>
+          <p>0关注&nbsp&nbsp0赞&nbsp&nbspLv.1</p>
         </div>
       </div>
     </div>
@@ -209,7 +208,23 @@ export default {
           text:'关于',
           more:'/static/images//more.png'
         },
-      ]
+      ],
+
+      user:{
+        id:"",
+        name:"请登录",
+        phone:"",
+        image:"/static/images/load_screen.png",
+        sex:true,
+        certification:null,
+        identityAuthentication:null,
+        status:false,
+        flag:1,
+        createdTime:0,
+        number:null,
+        idNumber:null
+      },
+      isLogin:false
     }
   },
 
@@ -232,12 +247,31 @@ export default {
       return `--tm:${time * 0.05}s`
     },
 
+    //登录
+    toLogin(){
+      if (!this.isLogin){
+        this.$router.push('/login');
+      }
+    },
+
     //退出
     exit(){
       this.$store.clearToken()
+      this.$store.clearUser()
       this.$router.push('/login');
     }
 
+  },
+
+  mounted() {
+    this.$store.getUserInfo().then(resp=>{
+      if (resp){
+        this.user=JSON.parse(resp)
+        this.isLogin=true
+      }else {
+        this.isLogin=false
+      }
+    })
   }
 }
 </script>
@@ -530,6 +564,10 @@ export default {
   margin-top: 30px;
 
   font-size: 32px;
+}
+.person-information-a-h2{
+  font-size: 35px;
+  font-weight: bold;
 }
 .person-information-b{
   position: relative;

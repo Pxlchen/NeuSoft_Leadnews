@@ -33,6 +33,9 @@ Cache.prototype={
     clearToken : function(){
         return this.__removeItem(this.tokenKey);
     },
+    clearUser : function(){
+        return this.__removeItem(this.user);
+    },
     __check : function(){
         if(this.storage==null){
             this.storage = weex.requireModule("storage");
@@ -59,7 +62,7 @@ Cache.prototype={
                 if(e.result=='success'){
                     resolve(e.data)
                 }else{
-                    reject(e)
+                    resolve(null)
                 }
             });
         });

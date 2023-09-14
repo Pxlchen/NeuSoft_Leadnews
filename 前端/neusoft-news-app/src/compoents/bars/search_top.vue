@@ -50,8 +50,8 @@
     .bar_bg{
         width: @screen-width;
         flex-direction: row;
-        background-color: @mian-color;
-        border-style: solid;
+        background-color: #d7eafc;
+
         height: @top-height;
         align-items: center;
         padding: 5px 30px 8px;

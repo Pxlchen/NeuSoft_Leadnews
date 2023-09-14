@@ -32,7 +32,6 @@
         <div class="logoView">
           <div class="logViewScro">
             <image class="image4" src="/static/images/login/logoc.png" mode="widthFix"></image>
-            <image class="image4 image4-2" src="/static/images/login/2.png" mode="widthFix"></image>
           </div>
         </div>
 
@@ -141,7 +140,7 @@ export default {
         this.show = true;
         this.checkPhone()
         this.errText=this.phoneErr
-        alert(this.phone)
+        //alert(this.phone)
       }else {
         this.params.phone=this.phone
         this.params.password=this.password
@@ -150,9 +149,9 @@ export default {
           //alert(d.code)
           if(d.code==200){
             this.$store.setToken(d.data.token)
-            this.$store.setUserInfo(JSON.stringify(d.data.user))
+            //this.$store.setUserInfo(JSON.stringify(d.data.user))
             //console.log(JSON.stringify(d.data.user))
-            this.$store.setToken(d.data.token)
+            //this.$store.setToken(d.data.token)
             this.$router.push("/home")
           }else{
             this.show = true;
@@ -173,15 +172,12 @@ export default {
       }else{
         this.params.phone=this.phone
         this.params.password=this.password
-        // alert(JSON.stringify(this.params))
         Api.login(this.params).then(d=>{
           if(d.code==200){
             this.$store.setToken(d.data.token)
-            this.$store.setUserInfo(JSON.stringify(d.data.user))
-            console.log(JSON.stringify(d.data.user))
+            //this.$store.setUserInfo(JSON.stringify(d.data.user))
             this.$router.push("/home")
             this.$store.setToken(d.data.token)
-            // alert(d.data.token)
             this.$router.push("/home")
           }else{
             modal.toast({ message:'用户或密码错误',duration:3})
@@ -216,10 +212,10 @@ export default {
       isLoginc:true,
       isRegister:false,
       isRegisterc:false,
-      phone: '',
-      phoneErr: '',
+      phone: '13511223456',
+      phoneErr: '请输入手机号',
       isPhoneSure: false,
-      password: '',
+      password: 'admin',
       passwordErr: '',
       isPwordSure:false,
       errText:'',
@@ -354,15 +350,17 @@ export default {
   bottom:-10px;
 }
 .image4{
-  width: 580px;
-  height: 440px;
+  width: 520px;
+  height: 420px;
   z-index: 5;
+  left: 50px;
   filter: drop-shadow(0 0 10px #585ce5);
 }
 .image4-2{
   position: absolute;
-  left: 0;
-  top: 0;
+  width: 500px;
+  height: 500px;
+  left: 50px;
   transform: rotateY(-180deg) translateZ(1px);
 }
 .logoView{
@@ -387,9 +385,9 @@ export default {
   display: flex;
   align-content: center;
   justify-content: center;
-  animation: play 6s infinite;
-  position: relative;
-  transform-style: preserve-3d;
+  //animation: play 6s infinite;
+  //position: relative;
+  //transform-style: preserve-3d;
 }
 
 .pro-box {

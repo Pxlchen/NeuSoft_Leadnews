@@ -36,10 +36,10 @@
       <div  class="form-which">
         <div class="whichId">
           <div class="select" :class="isXue?'select-left':'select-right'"></div>
-          <div class="whichId-x"  @click="selectId(0)" >
+          <div class="whichId-x"  @click="selectId(1)" >
             <p class="whichId-p" :class="isXue?'whichId-p-is':'whichId-p-no'" >学号</p>
           </div>
-          <div class="whichId-i"  @click="selectId(1)">
+          <div class="whichId-i"  @click="selectId(0)">
             <p class="whichId-p"  :class="isId?'whichId-p-is':'whichId-p-no'">身份证号</p>
           </div>
         </div>
@@ -63,7 +63,7 @@
     </div>
 
 
-    <wxc-dialog title="错误"
+    <wxc-dialog :title=title
                 :content=errText
                 :top="500"
                 :show="show"
@@ -80,18 +80,20 @@
 
 <script>
 import {WxcDialog} from "weex-ui";
+import {doPostJson} from "../../../configs/httpRequest";
+import md5 from "md5";
 
 export default {
   components: {WxcDialog},
   methods : {
     selectId(which){
       if (which==0){
-        this.isXue=true
-        this.isId=false
-        this.whichc=which
-      }else{
         this.isXue=false
         this.isId=true
+        this.whichc=which
+      }else{
+        this.isXue=true
+        this.isId=false
         this.whichc=which
       }
 
@@ -105,12 +107,6 @@ export default {
       this.checkName();
       this.checkIdCard()
       let isAllSure = true
-      console.log(this.isPhoneSure)
-      console.log(this.isPwordTSure)
-      console.log(this.isPwordSure)
-      console.log(this.isNameSure)
-      console.log(this.isXueHao)
-      console.log(this.isCardSure)
       if (!this.isPhoneSure){this.errText=this.errText+this.phoneErr+"\n";isAllSure=false}
       if (!this.isNameSure){this.errText=this.errText+this.nameErr+"\n";isAllSure=false}
       if (!this.isPwordSure){this.errText=this.errText+this.passwordErr+"\n";isAllSure=false}
@@ -118,15 +114,36 @@ export default {
       if (!this.isPwordTSure){
         if (this.isPwordSure){
           this.errText=this.errText+this.passwordTErr+"\n";
+          isAllSure=false
         }
-        isAllSure=false
       }
       switch (this.whichc){
-        case 0:if (!this.isXueHao){this.errText=this.errText+this.xuehaoErr+"\n";isAllSure=false};break;
-        case 1:if (!this.isCardSure){this.errText=this.errText+this.idCardErr+"\n";isAllSure=false};break;
-      }
+        case 1:if (!this.isXueHao){this.errText=this.errText+this.xuehaoErr+"\n";isAllSure=false};break;
+        case 0:if (!this.isCardSure){this.errText=this.errText+this.idCardErr+"\n";isAllSure=false};break;
 
-      if (isAllSure){alert("yes")}
+        }
+      if (isAllSure) {
+        let params={
+          phone:this.phone,
+          name:this.name,
+          number:this.xuehao,
+          idNumber:this.idCard,
+          password:md5(this.password),
+          type:this.whichc
+        }
+        //发起请求
+        doPostJson("/api/v1/signin/signin",params).then(resp=>{
+          if (resp.data.code==200 && resp.data.data=="SUCCESS"){
+            this.show=true
+            this.errText='注册成功'
+            this.title='注册提醒'
+          }else{
+            this.show=true
+            this.errText=resp.data.errorMessage
+            this.title='注册提醒'
+          }
+        })
+      }
       else
       {
         this.show = true;
@@ -294,28 +311,30 @@ export default {
     return{
       show: false,
       isChecked: false,
-      whichc:0,
+      whichc:1,
+      title:'提醒',
+
 
       isXue:true,
       isId:false,
 
-      phone: '',
+      phone: '18814216566',
       phoneErr: '',
       isPhoneSure: false,
 
-      name: '',
+      name: '阿松大',
       nameErr: '',
       isNameSure: false,
 
-      password: '',
+      password: 'qq123123',
       passwordErr: '',
       isPwordSure:false,
 
-      passwordT: '',
+      passwordT: 'qq123123',
       passwordTErr: '',
       isPwordTSure:false,
 
-      xuehao:'',
+      xuehao:'20215120222',
       xuehaoErr:'',
       isXueHao:false,
 

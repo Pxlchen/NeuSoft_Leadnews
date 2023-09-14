@@ -11,8 +11,8 @@ Api.prototype = {
     login: function(data){
         let url = this.vue.$config.urls.get('user_login')
         return this.vue.$request.postByEquipmentId(url,data)
-    },
-    //登录成功获取个人信息
+    }
+    // 登录成功获取个人信息
     // loginInfo: function(data){
     //     let url = this.vue.$config.urls.get('user_information')
     //

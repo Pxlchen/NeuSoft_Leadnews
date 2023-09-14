@@ -22,7 +22,14 @@ Request.prototype={
             body['equipmentId']=equipmentId
             return new Promise((resolve, reject) => {
                 this.post(url,body).then((d)=>{
-                    //console.log(d)
+                    // console.log("当前的数据")
+                    // console.log(JSON.stringify(d.data.user))
+                    this.store.setUserInfo(JSON.stringify(d.data.user))
+                    // console.log("获取Store的user")
+                    // this.store.getUserInfo().then(resp=>{
+                    //     console.log(resp)
+                    //     console.log((JSON.parse(resp)).id)
+                    // })
                     resolve(d);
                 }).catch((e)=>{
                     reject(e);
