@@ -29,8 +29,12 @@ public class AuthorizeFilter implements Ordered, GlobalFilter {
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
 
-        //2.判断是否登录或注册
-        if (request.getURI().getPath().contains("/login") || request.getURI().getPath().contains("/signin")) {
+        //2.判断是否是登录 / 注册 游客登录首页放行
+        if (request.getURI().getPath().contains("/login")
+                || request.getURI().getPath().contains("/signin")
+                || request.getURI().getPath().contains("/article")
+
+        ) {
             //放行
             return chain.filter(exchange);
         }
