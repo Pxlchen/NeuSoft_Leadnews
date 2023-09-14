@@ -55,6 +55,8 @@
     },
     components: {SearchTool,SearchResult,Editor},
     methods: {
+	  //查看数据
+	  queryConten : function(){},
       // 编辑数据
       viewData : function(item){
         this.$refs['editor'].view(item)

@@ -37,10 +37,24 @@
       <el-table-column label="操作"
          width="200" >
         <template slot-scope="scope">
-          <el-button
-            size="mini"
-            type="text"
-            @click="operateForView(scope.row)">查看</el-button>
+		<el-popover
+		  placement="right"
+		  width="1000"
+		  trigger="click">
+		  <div class="articleContent" style="width: 1000; height: 500px; overflow: scroll; ">
+			<h5>文章标题：{{scope.row.title}}</h5>
+			 <div  v-for="item of gridData">
+				  <span v-if="item.type == 'text'" style="display:block;text-indent:2em">{{item.value}}</span>
+				  <el-image v-if="item.type == 'image'"
+				       style="width: 1000px; height: 600px; margin: 10px 0 10px 0;"
+				       :src="item.value"
+				       :fit="contain"></el-image>
+			 </div>
+			 
+		  </div>
+		  <el-button size="mini"
+            type="text" slot="reference" @click="queryData(scope.row.content,scope.$index )">查看</el-button>
+		</el-popover>
           <el-button
             size="mini"
             type="text"
@@ -62,6 +76,7 @@
       </el-pagination>
     </div>
   </section>
+  
 </template>
 
 <script>
@@ -69,9 +84,10 @@ import DateUtil from '@/utils/date'
 import {updateData2} from '@/api/common'
 const avatar = require('@/assets/avatar.jpg')
 export default {
-  props: ['host','list','fileds','table','pageSize','total','changePage','changeStatus','editData','viewData'],
+  props: ['host','list','fileds','table','pageSize','total','changePage','changeStatus','editData','viewData','rowData'],
   data() {
     return {
+	   gridData: [{type:"text",value:"无数据"}],
        listPage:{
           currentPage:1
        },
@@ -83,6 +99,11 @@ export default {
     }
   },
   methods: {
+	//查看文章内容
+	queryData : function(content,index){
+		 this.gridData = JSON.parse(content)
+		// alert(content)
+	},
     getImage : function(item, key){
       if(item[key]){
         return this.host+item[key];
